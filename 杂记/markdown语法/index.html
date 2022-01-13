@@ -40,6 +40,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -744,7 +746,8 @@
 <span class="normal"><a href="#__codelineno-5-13">13</a></span>
 <span class="normal"><a href="#__codelineno-5-14">14</a></span>
 <span class="normal"><a href="#__codelineno-5-15">15</a></span>
-<span class="normal"><a href="#__codelineno-5-16">16</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nb">window</span><span class="p">.</span><span class="nx">MathJax</span> <span class="o">=</span> <span class="p">{</span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nb">window</span><span class="p">.</span><span class="nx">MathJax</span> <span class="o">=</span> <span class="p">{</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>  <span class="nx">tex</span><span class="o">:</span> <span class="p">{</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3"></a>    <span class="nx">inlineMath</span><span class="o">:</span> <span class="p">[[</span><span class="s2">&quot;\\(&quot;</span><span class="p">,</span> <span class="s2">&quot;\\)&quot;</span><span class="p">]],</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="nx">displayMath</span><span class="o">:</span> <span class="p">[[</span><span class="s2">&quot;\\[&quot;</span><span class="p">,</span> <span class="s2">&quot;\\]&quot;</span><span class="p">]],</span>
@@ -757,9 +760,10 @@
 <a id="__codelineno-5-11" name="__codelineno-5-11"></a>  <span class="p">}</span>
 <a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="p">};</span>
 <a id="__codelineno-5-13" name="__codelineno-5-13"></a>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="nb">document</span><span class="nx">$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span> 
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a>  <span class="nx">MathJax</span><span class="p">.</span><span class="nx">typesetPromise</span><span class="p">()</span>
-<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="p">})</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="nb">document</span><span class="nx">$</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span> 
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a>  <span class="nx">MathJax</span><span class="p">.</span><span class="nx">typesetPromise</span><span class="p">()</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="p">})</span>
 </code></pre></div>
 </td></tr></table>
 </div>
@@ -785,18 +789,30 @@
 </div>
 </div>
 <h2 id="_6"><strong>图表</strong><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>图表暂时存在问题</p>
-</blockquote>
+<p>目前，支持图表需要在mkdocs.yml中添加以下内容：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.superfences</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">      </span><span class="nt">custom_fences</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mermaid</span><span class="w"></span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">          </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mermaid</span><span class="w"></span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">          </span><span class="c1"># format: !!python/name:pymdownx.superfences.fence_code_format</span><span class="w"></span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">          </span><span class="nt">format</span><span class="p">:</span><span class="w"> </span><span class="kt">!!python/name:pymdownx.superfences.fence_div_format</span><span class="w"></span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="nt">extra_javascript</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js</span><span class="w"></span>
+</code></pre></div>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>这个地方，8.1.5版本的<a href="https://github.com/squidfunk/mkdocs-material">Material for MkDocs</a>中的配置文件默认是<code>fence_code_format</code>，而且在它的<a href="https://github.com/squidfunk/mkdocs-material/issues/3377">issue</a>中也表示需要将<code>fence_div_format</code>换成<code>fence_code_format</code>，但是在我这里确只有<code>fence_div_format</code>起作用，暂时不清楚是什么问题导致的</p>
+</div>
 <h3 id="_7">流程图<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>  graph TD
+<div class="mermaid">  graph TD
     A[Christmas] --&gt;|Get money| B(Go shopping)
     B --&gt; C{Let me think}
     C --&gt;|One| D[Laptop]
     C --&gt;|Two| E[iPhone]
-    C --&gt;|Three| F[fa:fa-car Car]</code></pre>
+    C --&gt;|Three| F[fa:fa-car Car]</div>
 <h3 id="_8">序列图<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>sequenceDiagram
+<div class="mermaid">sequenceDiagram
   Alice-&gt;&gt;John: Hello John, how are you?
   loop Healthcheck
       John-&gt;&gt;John: Fight against hypochondria
@@ -804,9 +820,9 @@
   Note right of John: Rational thoughts!
   John--&gt;&gt;Alice: Great!
   John-&gt;&gt;Bob: How about you?
-  Bob--&gt;&gt;John: Jolly good!</code></pre>
+  Bob--&gt;&gt;John: Jolly good!</div>
 <h3 id="_9">状态图<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>stateDiagram-v2
+<div class="mermaid">stateDiagram-v2
   state fork_state &lt;&lt;fork&gt;&gt;
     [*] --&gt; fork_state
     fork_state --&gt; State2
@@ -816,9 +832,9 @@
     State2 --&gt; join_state
     State3 --&gt; join_state
     join_state --&gt; State4
-    State4 --&gt; [*]</code></pre>
+    State4 --&gt; [*]</div>
 <h3 id="_10">类图<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>classDiagram
+<div class="mermaid">classDiagram
   Person &lt;|-- Student
   Person &lt;|-- Professor
   Person : +String name
@@ -843,12 +859,12 @@
     +String country
     -validate()
     +outputAsLabel()  
-  }</code></pre>
+  }</div>
 <h3 id="_11">实体关系图<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>erDiagram
+<div class="mermaid">erDiagram
   CUSTOMER ||--o{ ORDER : places
   ORDER ||--|{ LINE-ITEM : contains
-  CUSTOMER }|..|{ DELIVERY-ADDRESS : uses</code></pre>
+  CUSTOMER }|..|{ DELIVERY-ADDRESS : uses</div>
 
               
             </article>
@@ -923,7 +939,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.instant", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "search": "../../assets/javascripts/workers/search.22074ed6.min.js"}</script>
     
     
       <script src="../../assets/javascripts/bundle.1514a9a0.min.js"></script>
@@ -933,6 +949,8 @@
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
       
     
   </body>
