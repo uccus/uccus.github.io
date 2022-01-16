@@ -787,29 +787,26 @@
 <a id="__codelineno-3-150" name="__codelineno-3-150" href="#__codelineno-3-150"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">杂记/科学上网方法.md</span><span class="w"></span>
 </code></pre></div>
 <p>上述配置文件中，用到的本地文件均在docs目录下，目录结构如下：</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">.</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="err">├─</span> <span class="n">docs</span><span class="o">/</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="o">|</span>  <span class="err">├─</span> <span class="n">assets</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="o">|</span>  <span class="o">|</span>  <span class="err">└─</span> <span class="n">images</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="o">|</span>  <span class="o">|</span>     <span class="err">└─</span> <span class="n">favicon</span><span class="o">.</span><span class="n">png</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="o">|</span>  <span class="err">├─</span> <span class="n">javascripts</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="o">|</span>  <span class="o">|</span>  <span class="err">└─</span> <span class="n">mathjax</span><span class="o">.</span><span class="n">js</span>     <span class="c1"># (1)</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="o">|</span>  <span class="err">├─</span> <span class="n">python</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="o">|</span>  <span class="o">|</span>  <span class="err">└─</span> <span class="n">修改下载源</span><span class="o">.</span><span class="n">md</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="o">|</span>  <span class="err">├─</span> <span class="n">stylesheets</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="o">|</span>  <span class="o">|</span>  <span class="err">└─</span> <span class="n">extra</span><span class="o">.</span><span class="n">css</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="o">|</span>  <span class="err">├─</span> <span class="n">建站过程</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="o">|</span>  <span class="o">|</span>  <span class="err">├─</span> <span class="n">MkDocs生成静态站点</span><span class="o">.</span><span class="n">md</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="o">|</span>  <span class="o">|</span>  <span class="err">└─</span> <span class="n">建站思路</span><span class="o">.</span><span class="n">md</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="o">|</span>  <span class="err">├─</span> <span class="n">杂记</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="o">|</span>  <span class="o">|</span>  <span class="err">├─</span> <span class="n">markdown语法</span><span class="o">.</span><span class="n">md</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="o">|</span>  <span class="o">|</span>  <span class="err">└─</span> <span class="n">科学上网方法</span><span class="o">.</span><span class="n">md</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="err">│</span>  <span class="err">└─</span> <span class="n">index</span><span class="o">.</span><span class="n">md</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="err">└─</span> <span class="n">mkdocs</span><span class="o">.</span><span class="n">yml</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>.
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>├─ docs/
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>│  ├─ assets
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>|  |  └─ images
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>|  |     └─ favicon.png
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>|  ├─ javascripts
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>|  |  └─ mathjax.js 
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>|  ├─ python
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>|  |  └─ 修改下载源.md
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>|  ├─ stylesheets
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>|  |  └─ extra.css
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>|  ├─ 建站过程
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>|  |  ├─ MkDocs生成静态站点.md
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>|  |  └─ 建站思路.md
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>|  ├─ 杂记
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>|  |  ├─ markdown语法.md
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>|  |  └─ 科学上网方法.md
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>│  └─ index.md
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>└─ mkdocs.yml
 </code></pre></div>
-<ol>
-<li><img alt="🙋‍♂️" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f64b-200d-2642-fe0f.svg" title=":man_raising_hand:" /> 如何支持数学公式，请看<a href="/杂记/markdown语法/#_4">这里</a></li>
-</ol>
 <h3 id="_4">本地预览<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mkdocs serve --dev-addr=127.0.0.1:8002
 </code></pre></div>
