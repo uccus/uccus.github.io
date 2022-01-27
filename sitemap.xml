@@ -2,42 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://uccus.github.io/</loc>
-         <lastmod>2022-01-17</lastmod>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://uccus.github.io/python/Anaconda%E7%AE%A1%E7%90%86/</loc>
+         <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uccus.github.io/python/%E4%BF%AE%E6%94%B9%E4%B8%8B%E8%BD%BD%E6%BA%90/</loc>
-         <lastmod>2022-01-17</lastmod>
+         <lastmod>2022-01-27</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://uccus.github.io/wsl/%E5%AE%89%E8%A3%85Ubuntu/</loc>
+         <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uccus.github.io/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/1.%20%E5%BB%BA%E7%AB%99%E6%80%9D%E8%B7%AF/</loc>
-         <lastmod>2022-01-17</lastmod>
+         <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uccus.github.io/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/2.%20MkDocs%E7%94%9F%E6%88%90%E7%AB%99%E7%82%B9/</loc>
-         <lastmod>2022-01-17</lastmod>
+         <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uccus.github.io/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/3.%20GitHub%E6%89%98%E7%AE%A1%E7%AB%99%E7%82%B9/</loc>
-         <lastmod>2022-01-17</lastmod>
+         <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uccus.github.io/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/4.%20CDN%E5%8A%A0%E9%80%9F%E7%AB%99%E7%82%B9/</loc>
-         <lastmod>2022-01-17</lastmod>
+         <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uccus.github.io/%E6%9D%82%E8%AE%B0/markdown%E8%AF%AD%E6%B3%95/</loc>
-         <lastmod>2022-01-17</lastmod>
+         <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://uccus.github.io/%E6%9D%82%E8%AE%B0/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%96%B9%E6%B3%95/</loc>
-         <lastmod>2022-01-17</lastmod>
+         <lastmod>2022-01-27</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
