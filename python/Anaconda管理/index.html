@@ -423,15 +423,19 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
+        
+          
         
           
         
@@ -458,6 +462,103 @@
       <a href="../%E4%BF%AE%E6%94%B9%E4%B8%8B%E8%BD%BD%E6%BA%90/" class="md-nav__link">
         修改下载源
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Anaconda管理
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Anaconda管理
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 配置清华镜像源
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-python" class="md-nav__link">
+    2. 创建指定python环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-python" class="md-nav__link">
+    3. 切换python环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 复制环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 删除环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6. 分享环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-32" class="md-nav__link">
+    7. 创建32位环境
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -557,6 +658,63 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 配置清华镜像源
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-python" class="md-nav__link">
+    2. 创建指定python环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-python" class="md-nav__link">
+    3. 切换python环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 复制环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5. 删除环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6. 分享环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-32" class="md-nav__link">
+    7. 创建32位环境
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -570,6 +728,58 @@
 
 <h1 id="anacondapython">Anaconda管理Python<a class="headerlink" href="#anacondapython" title="Permanent link">&para;</a></h1>
 <p>Anaconda是一个可用于科学计算的Python发行版，包含了众多流行的科学计算、数据分析的 Python 包，并且可以很方便的帮我们管理在使用Python时用到的包和环境。</p>
+<h3 id="1">1. 配置清华镜像源<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>使用conda进行安装时，访问的是国外的网络，所以下载和安装包时会特别慢。我们需要更换到国内镜像源地址，这里我更换到国内的清华大学地址。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>conda config --set show_channel_urls yes
+</code></pre></div>
+<h3 id="2-python">2. 创建指定python环境<a class="headerlink" href="#2-python" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># 创建python3.7的环境
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>conda create --name $YOUR_ENV_NAME python=3.7
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a># 创建python2.7的环境
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>conda create --name $YOUR_ENV_NAME python=2.7
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a># 创建python3.7，同时下载numpy和scripy包
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>conda create --name $YOUR_ENV_NAME python=3.7 numpy scripy
+</code></pre></div>
+<h3 id="3-python">3. 切换python环境<a class="headerlink" href="#3-python" title="Permanent link">&para;</a></h3>
+<p>想要使用上面创建的python3.7的环境，需要进行环境的切换。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># 进入环境
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>conda activate $YOUR_ENV_NAME
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a># 退出环境
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>conda deactivate
+</code></pre></div>
+<h3 id="4">4. 复制环境<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>conda create --name $NEW_ENV_NAME --clone $OLD_ENV_NAME 
+</code></pre></div>
+<h3 id="5">5. 删除环境<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>conda remove --name $YOUR_ENV_NAME --all
+</code></pre></div>
+<h3 id="6">6. 分享环境<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
+<p>以分享python3.7为例：</p>
+<p>首先，激活python3.7环境，</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>conda activate python3.7
+</code></pre></div>
+<p>然后，导出环境信息</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>conda env export &gt; python3.7.yml
+</code></pre></div>
+<p>其他人拿到python3.7.yml，可以通过</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>conda env create -f python3.7.yml
+</code></pre></div>
+<p>创建一模一样的环境，前提是需要有网络。</p>
+<h3 id="7-32">7. 创建32位环境<a class="headerlink" href="#7-32" title="Permanent link">&para;</a></h3>
+<p>上面默认都是64位的python环境，如果需要32位的环境怎么办呢？其实也很简单。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a># 进入32位模式，仅对当前终端有效
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>set CONDA_FORCE_32BIT=1
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a># 查看当前平台
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>conda info
+</code></pre></div>
+<p><img alt="images_20220216103843.png" class="img-fluid" src="/assets/python/images_20220216103843.png" tag="1" /></p>
+<p>然后，就可以像之前一样创建环境了，如果想退出32位模式</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a># 退出32位模式
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>set CONDA_FORCE_32BIT=0
+</code></pre></div>
 
               
               <hr>
@@ -592,6 +802,41 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="页脚">
+      
+        
+        <a href="../%E4%BF%AE%E6%94%B9%E4%B8%8B%E8%BD%BD%E6%BA%90/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 修改下载源" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              修改下载源
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../%E6%9D%82%E8%AE%B0/markdown%E8%AF%AD%E6%B3%95/" class="md-footer__link md-footer__link--next" aria-label="下一页: Markdown语法" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              Markdown语法
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
