@@ -12,3 +12,7 @@
     font-weight: 900;
     font-style: normal
 }
+
+.md-grid{
+    max-width: 78rem;
+}

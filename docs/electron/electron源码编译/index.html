@@ -12,14 +12,14 @@
         <meta name="author" content="zangchao">
       
       
-        <link rel="canonical" href="https://uccus.github.io/docs/electron/electron%E5%A6%82%E4%BD%95%E8%B0%83%E7%94%A8chromium%E4%BB%A3%E7%A0%81/">
+        <link rel="canonical" href="https://uccus.github.io/docs/electron/electron%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.5">
     
     
       
-        <title>Electron如何调用chromium代码 - UCCUS</title>
+        <title>Electron源码编译 - UCCUS</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#electronchromium" class="md-skip">
+        <a href="#electronwindows" class="md-skip">
           跳转至
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Electron如何调用chromium代码
+              Electron源码编译
             
           </span>
         </div>
@@ -525,20 +525,6 @@
               
   
   
-  
-    <li class="md-nav__item">
-      <a href="../electron%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/" class="md-nav__link">
-        Electron源码编译
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
   
   
@@ -550,10 +536,96 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Electron源码编译
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Electron如何调用chromium代码
+        Electron源码编译
       </a>
       
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    一、 获取源码
+  </a>
+  
+    <nav class="md-nav" aria-label="一、 获取源码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-depot_tools" class="md-nav__link">
+    a. 下载depot_tools工具包
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-gclient" class="md-nav__link">
+    b. 生成.gclient文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    c. 同步代码及依赖
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-hook" class="md-nav__link">
+    d. 执行额外hook脚本
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    二、编译源码
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../electron%E5%A6%82%E4%BD%95%E8%B0%83%E7%94%A8chromium%E4%BB%A3%E7%A0%81/" class="md-nav__link">
+        Electron如何调用chromium代码
+      </a>
     </li>
   
 
@@ -653,6 +725,62 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    一、 获取源码
+  </a>
+  
+    <nav class="md-nav" aria-label="一、 获取源码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-depot_tools" class="md-nav__link">
+    a. 下载depot_tools工具包
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-gclient" class="md-nav__link">
+    b. 生成.gclient文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    c. 同步代码及依赖
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-hook" class="md-nav__link">
+    d. 执行额外hook脚本
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    二、编译源码
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -664,7 +792,69 @@
               
                 
 
-<h1 id="electronchromium">Electron调用chromium源码解析<a class="headerlink" href="#electronchromium" title="Permanent link">&para;</a></h1>
+<h1 id="electronwindows">Electron源码在windows平台编译过程记录<a class="headerlink" href="#electronwindows" title="Permanent link">&para;</a></h1>
+<h2 id="_1">一、 获取源码<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>获取全程需要科学上网的支持，为啥不找国内镜像下载呢，国内镜像只是下载electron这个仓库的代码，并不会自动拉取依赖。</p>
+</blockquote>
+<h4 id="a-depot_tools">a. 下载depot_tools工具包<a class="headerlink" href="#a-depot_tools" title="Permanent link">&para;</a></h4>
+<p>depot_tools是谷歌用于管理大仓库代码的工具，这里我们需要它。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span> E:<span class="se">\t</span>ools
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+</code></pre></div>
+<p>拉取成功后，设置环境变量<code>PATH=E:\tools\depot_tools</code></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>这个环境变量必须在git和python的前面，这样就没有了git和python版本的干扰,设置完成之后，就可以使用gclient，gn等脚本了</p>
+</div>
+<p>继续设置环境变量</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>#禁用depot_tools的自动更新
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>set DEPOT_TOOLS_UPDATE=0
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>#告诉depot_tools，不下载visual studio
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>set DEPOT_TOOLS_WIN_TOOLCHAIN=0
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>#设置git缓存路径，git不支持断点续传，下载时很有可能中断，这个时候缓存非常有用
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>set GIT_CACHE_PATH=E:\git_cache
+</code></pre></div>
+<h4 id="b-gclient">b. 生成.gclient文件<a class="headerlink" href="#b-gclient" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cd E:\work\opensource
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>mkdir electron &amp;&amp; cd electron
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>#生成.gclient文件，指定tag版本
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>gclient config --name &quot;src/electron&quot; --unmanaged https://github.com/electron/electron@v4.2.12
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>为什么<code>--name</code>的值是<code>src/electron</code>呢？因为electron是作为chromium的一个子项目管理的，编译脚本中路径已经写死，代码拉下来后，目录结构是这样的
+<img alt="image_20220223184526.png" src="/others/assets/electron/image_20220223184526.png" /></p>
+</div>
+<h4 id="c">c. 同步代码及依赖<a class="headerlink" href="#c" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>gclient sync --nohooks --no-history
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>--nohooks：代码拉取完成后，不执行hook操作</p>
+<p>--no-history：不拉取历史提交信息，可大大减少流量</p>
+<p>这个过程会持续2-3h。。。</p>
+</div>
+<h4 id="d-hook">d. 执行额外hook脚本<a class="headerlink" href="#d-hook" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>gclient runhooks
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>这个过程会拉取项目依赖的二进制文件，比如clang编译器等，这一步消耗时间不会太多，执行完成后，整个代码及其依赖，二进制依赖都已成功下载到本地</p>
+<p>不出意外的话肯定会有意外，意外情况---&gt;传送门</p>
+</div>
+<h2 id="_2">二、编译源码<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>我下载的版本是<code>4.2.12</code>，这个版本只能用<code>vs2017</code>编译，主要是咱也不敢换其他编译器啊<img alt="😆" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f606.svg" title=":laughing:" /></p>
+<p>除了vs版本，还需要<code>win10 sdk</code>的支持，在<code>src/build/toolchain/win/setup_toolchain.py</code>中，我们可以看到需要<code>10.0.17134.0</code>的<code>win10 sdk</code></p>
+<p><img alt="image_20220223191107.png" class="img-fluid" src="/others/assets/electron/image_20220223191107.png" tag="1" /></p>
+<p>准备工作完成之后呢，就可以开始编译了</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>cd src
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>set CHROMIUM_BUILDTOOLS_PATH=%cd%\buildtools
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>#生成debug版本
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>gn gen out/debug --args=&quot;import(\&quot;//electron/build/args/debug.gn\&quot;)&quot;
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>#编译
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>ninja -C out/debug electron
+</code></pre></div>
 
               
               <hr>
@@ -691,7 +881,7 @@
     <nav class="md-footer__inner md-grid" aria-label="页脚">
       
         
-        <a href="../electron%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Electron源码编译" rel="prev">
+        <a href="../../python/Anaconda%E7%AE%A1%E7%90%86/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Anaconda管理" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -700,20 +890,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              Electron源码编译
+              Anaconda管理
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../%E6%9D%82%E8%AE%B0/markdown%E8%AF%AD%E6%B3%95/" class="md-footer__link md-footer__link--next" aria-label="下一页: Markdown语法" rel="next">
+        <a href="../electron%E5%A6%82%E4%BD%95%E8%B0%83%E7%94%A8chromium%E4%BB%A3%E7%A0%81/" class="md-footer__link md-footer__link--next" aria-label="下一页: Electron如何调用chromium代码" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              Markdown语法
+              Electron如何调用chromium代码
             </div>
           </div>
           <div class="md-footer__button md-icon">
