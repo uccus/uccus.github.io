@@ -507,6 +507,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5">
@@ -623,6 +625,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../electron%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        Electron编译过程中的问题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../electron%E5%A6%82%E4%BD%95%E8%B0%83%E7%94%A8chromium%E4%BB%A3%E7%A0%81/" class="md-nav__link">
         Electron如何调用chromium代码
       </a>
@@ -655,17 +671,69 @@
         
           
         
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          逆向
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="逆向" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          逆向
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%80%86%E5%90%91/01%20%20OD%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%AE%B0%E5%BD%95/" class="md-nav__link">
+        01  OD常用快捷键记录
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        
+          
+        
           
         
       
       
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_7">
           杂记
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="杂记" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           杂记
         </label>
@@ -845,7 +913,7 @@
 </div>
 <h2 id="_2">二、编译源码<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>我下载的版本是<code>4.2.12</code>，这个版本只能用<code>vs2017</code>编译，主要是咱也不敢换其他编译器啊<img alt="😆" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f606.svg" title=":laughing:" /></p>
-<p>除了vs版本，还需要<code>win10 sdk</code>的支持，在<code>src/build/toolchain/win/setup_toolchain.py</code>中，我们可以看到需要<code>10.0.17134.0</code>的<code>win10 sdk</code></p>
+<p>除了vs版本，还需要<code>win10 sdk</code>的支持，在<code>src/build/toolchain/win/setup_toolchain.py</code>中，我们可以看到需要<code>10.0.17134.0</code>的<code>win10 sdk</code>，意味着我们需要下载指定的<code>win10 sdk</code>，下载地址：<a href="https://developer.microsoft.com/zh-cn/windows/downloads/sdk-archive/">这是个传送门</a></p>
 <p><img alt="image_20220223191107.png" class="img-fluid" src="/others/assets/electron/image_20220223191107.png" tag="1" /></p>
 <p>准备工作完成之后呢，就可以开始编译了</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>cd src
@@ -855,6 +923,8 @@
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>#编译
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>ninja -C out/debug electron
 </code></pre></div>
+<p>编译中可能出现的问题----&gt;传送门</p>
+<p>如果完全按照上面的方法做的话，编译不会出现问题，因为谷歌的大佬们已经将代码依赖管理的非常好了。</p>
 
               
               <hr>
@@ -897,13 +967,13 @@
       
       
         
-        <a href="../electron%E5%A6%82%E4%BD%95%E8%B0%83%E7%94%A8chromium%E4%BB%A3%E7%A0%81/" class="md-footer__link md-footer__link--next" aria-label="下一页: Electron如何调用chromium代码" rel="next">
+        <a href="../electron%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98/" class="md-footer__link md-footer__link--next" aria-label="下一页: Electron编译过程中的问题" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              Electron如何调用chromium代码
+              Electron编译过程中的问题
             </div>
           </div>
           <div class="md-footer__button md-icon">

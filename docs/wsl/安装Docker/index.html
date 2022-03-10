@@ -603,6 +603,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5">
@@ -625,6 +627,20 @@
     <li class="md-nav__item">
       <a href="../../electron/electron%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/" class="md-nav__link">
         Electron源码编译
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../electron/electron%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        Electron编译过程中的问题
       </a>
     </li>
   
@@ -669,17 +685,69 @@
         
           
         
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          逆向
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="逆向" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          逆向
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E9%80%86%E5%90%91/01%20%20OD%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%AE%B0%E5%BD%95/" class="md-nav__link">
+        01  OD常用快捷键记录
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        
+          
+        
           
         
       
       
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_7">
           杂记
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="杂记" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           杂记
         </label>
@@ -843,17 +911,17 @@
 <p class="admonition-title">Question</p>
 <p><img alt="image_20220209104230.png" class="img-fluid" src="/others/assets/wsl/image_20220209104230.png" tag="1" /></p>
 </div>
-<div class="admonition success">
-<p class="admonition-title">Success</p>
+<details class="success">
+<summary>Success</summary>
 <p>解决办法：打开任务管理器→资源监视器→网络→侦听端口。</p>
 <p>查看哪个程序占用了53号端口，暂时将其关闭。</p>
-</div>
+</details>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
 <p>Unable to expose Docker API on 127.0.0.1:2375,[::1]:2375 on Windows 10. The port is already in use by another program.</p>
 </div>
-<div class="admonition success">
-<p class="admonition-title">Success</p>
+<details class="success">
+<summary>Success</summary>
 <p>提示2375端口被占用，但是<code>netstat -an|grep 2375</code>没有发现2375被占用。</p>
 <p>解决办法：办法来自<a href="https://github.com/docker/for-win/issues/3546">https://github.com/docker/for-win/issues/3546</a></p>
 <p>首先，查看一下2375端口是否被系统保留，就是不允许其他程序占用。</p>
@@ -877,7 +945,7 @@
 </code></pre></div>
 </li>
 </ul>
-</div>
+</details>
 <p>​    </p>
 
               
