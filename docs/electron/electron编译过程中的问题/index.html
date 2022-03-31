@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://uccus.github.io/docs/electron/electron%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.5">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.1.5">
     
     
       
@@ -577,8 +577,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-no-module-named-win32file" class="md-nav__link">
-    1. No module named win32file
+  <a href="#1-dchromedepot_toolspython3_bin_reldirtxt" class="md-nav__link">
+    1. 系统找不到文件 D:\chrome\depot_tools\python3_bin_reldir.txt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-warning-subprocess-gitbat-fetch-prune" class="md-nav__link">
+    2. warning: subprocess '"git.bat" "fetch" "--prune"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-no-module-named-win32file" class="md-nav__link">
+    3. No module named win32file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-unicodedecodeerror" class="md-nav__link">
+    4. UnicodeDecodeError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-subprocess-calledprocesserror" class="md-nav__link">
+    5. subprocess CalledProcessError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-visual-studio-not-found" class="md-nav__link">
+    6. visual studio not found
   </a>
   
 </li>
@@ -759,8 +794,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-no-module-named-win32file" class="md-nav__link">
-    1. No module named win32file
+  <a href="#1-dchromedepot_toolspython3_bin_reldirtxt" class="md-nav__link">
+    1. 系统找不到文件 D:\chrome\depot_tools\python3_bin_reldir.txt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-warning-subprocess-gitbat-fetch-prune" class="md-nav__link">
+    2. warning: subprocess '"git.bat" "fetch" "--prune"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-no-module-named-win32file" class="md-nav__link">
+    3. No module named win32file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-unicodedecodeerror" class="md-nav__link">
+    4. UnicodeDecodeError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-subprocess-calledprocesserror" class="md-nav__link">
+    5. subprocess CalledProcessError
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-visual-studio-not-found" class="md-nav__link">
+    6. visual studio not found
   </a>
   
 </li>
@@ -779,7 +849,21 @@
                 
 
 <h1 id="electron">electron编译过程中遇到的问题<a class="headerlink" href="#electron" title="Permanent link">&para;</a></h1>
-<h4 id="1-no-module-named-win32file">1. No module named win32file<a class="headerlink" href="#1-no-module-named-win32file" title="Permanent link">&para;</a></h4>
+<h4 id="1-dchromedepot_toolspython3_bin_reldirtxt">1. 系统找不到文件 D:\chrome\depot_tools\python3_bin_reldir.txt<a class="headerlink" href="#1-dchromedepot_toolspython3_bin_reldirtxt" title="Permanent link">&para;</a></h4>
+<details class="done">
+<summary>Done</summary>
+<p>如果出现这个问题，去掉DEPOT_TOOLS_UPDATE环境变量</p>
+</details>
+<h4 id="2-warning-subprocess-gitbat-fetch-prune">2. warning: subprocess '"git.bat" "fetch" "--prune"<a class="headerlink" href="#2-warning-subprocess-gitbat-fetch-prune" title="Permanent link">&para;</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>warning: subprocess '"git.bat" "fetch" "--prune" "origin" "+refs/heads/<em>:refs/heads/</em>"' in ... failed; will retry after a short nap</p>
+</div>
+<details class="done">
+<summary>Done</summary>
+<p>因为网络波动或者vpn的不稳定，就会出现上面的警告，出现警告后，脚本会自动重试，如果重试了几回都失败了，那脚本就会退出，这个时候，我们检查下vpn，切换下线路，确保网络的稳定，然后再次执行拉取的命令，这个时候我们设置的git缓存就会起到很大的作用。</p>
+</details>
+<h4 id="3-no-module-named-win32file">3. No module named win32file<a class="headerlink" href="#3-no-module-named-win32file" title="Permanent link">&para;</a></h4>
 <div class="admonition question">
 <p class="admonition-title">Question</p>
 <p>python ImportError: No module named win32file</p>
@@ -788,6 +872,36 @@
 <summary>Done</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python -m pip install pywin32
 </code></pre></div>
+</details>
+<h4 id="4-unicodedecodeerror">4. UnicodeDecodeError<a class="headerlink" href="#4-unicodedecodeerror" title="Permanent link">&para;</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p><img alt="" src="/others/assets/electron/image_20220330191107.png" /></p>
+</div>
+<details class="done">
+<summary>Done</summary>
+<p>在<code>D:\chrome\depot_tools\bootstrap\bootstrap.py</code>的107行，添加代码<code>,encoding='utf-8'</code>，如下：</p>
+<p><img alt="" src="/others/assets/electron/image_20220330172259.png" /></p>
+</details>
+<h4 id="5-subprocess-calledprocesserror">5. subprocess CalledProcessError<a class="headerlink" href="#5-subprocess-calledprocesserror" title="Permanent link">&para;</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p><img alt="" src="/others/assets/electron/image_20220330180441.png" /></p>
+</div>
+<details class="done">
+<summary>Done</summary>
+<p>根据图中的具体错误来看，是执行<code>python script/lib/npm.py install</code>失败，查看<code>npm.py</code>文件，可以看到需要执行<code>npm.cmd</code>，显然安装nodejs并设置环境变量可以解决</p>
+</details>
+<h4 id="6-visual-studio-not-found">6. visual studio not found<a class="headerlink" href="#6-visual-studio-not-found" title="Permanent link">&para;</a></h4>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p><img alt="" src="/others/assets/electron/image_20220330190501.png" /></p>
+</div>
+<details class="done">
+<summary>Done</summary>
+<p>手动安装visual studio 2017，并设置环境变量<code>vs2017_install</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>set vs2017_install=F:\visual studio\Microsoft Visual Studio\2017\Community
+</code></pre></div></p>
 </details>
 <p>未完待续。。。</p>
 
@@ -872,7 +986,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "search": "../../../assets/javascripts/workers/search.b6ff8c07.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.b6ff8c07.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.5e13d264.min.js"></script>
