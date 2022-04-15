@@ -917,11 +917,14 @@
 <p><img alt="image_20220223191107.png" class="img-fluid" src="/others/assets/electron/image_20220223191107.png" tag="1" /></p>
 <p>准备工作完成之后呢，就可以开始编译了</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>cd src
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>set CHROMIUM_BUILDTOOLS_PATH=%cd%\buildtools
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>#生成debug版本
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>gn gen out/debug --args=&quot;import(\&quot;//electron/build/args/debug.gn\&quot;)&quot;
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>#编译
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>ninja -C out/debug electron
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>#设置vs2017的目录
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>set vs2017_install=F:\visual studio\Microsoft Visual Studio\2017\Community
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>#设置chromium构建工具目录
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>set CHROMIUM_BUILDTOOLS_PATH=%cd%\buildtools
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>#生成debug版本
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>gn gen out/debug --args=&quot;import(\&quot;//electron/build/args/debug.gn\&quot;)&quot;
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>#编译
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>ninja -C out/debug electron
 </code></pre></div>
 <p>编译中可能出现的问题----&gt;<a href="/docs/electron/electron编译过程中的问题/">传送门</a></p>
 <p>如果完全按照上面的方法做的话，编译不会出现问题，因为谷歌的大佬们已经将代码依赖管理的非常好了。</p>
