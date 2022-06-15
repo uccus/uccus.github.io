@@ -946,7 +946,35 @@
 </li>
 </ul>
 </details>
-<p>​    </p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>windows中docker和vmware是冲突的，需要重启切换环境，主要是<code>Hyper-V</code></p>
+</div>
+<details class="success">
+<summary>Success</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">docker切换到vmware环境</label><label for="__tabbed_1_2">vmware切换到docker环境</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>第一步：禁用Device Guard：</p>
+<p>右键单击“开始” &rarr; “运行”，键入gpedit.msc，然后单击“ 确定”，打开本地组策略编辑器。</p>
+<p>本地计算机策略 &rarr; 计算机配置 &rarr; 管理模板&rarr;系统 &rarr;Device Guard &rarr; 打开基于虚拟化的安全性&rarr;选择已禁用。</p>
+<p>第二步：禁用Hyper-V</p>
+<p>以管理员身份运行Windows Powershell运行下面命令并重启电脑：
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>bcdedit /set hypervisorlaunchtype off
+</code></pre></div></p>
+</div>
+<div class="tabbed-block">
+<p>第一步：启用Hyper-V</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>bcdedit /set hypervisorlaunchtype auto
+</code></pre></div>
+<p>第二步：启用Device Guard</p>
+<p>右键单击“开始” &rarr; “运行”，键入gpedit.msc，然后单击“ 确定”。打开本地组策略编辑器。</p>
+<p>本地计算机策略 &rarr; 计算机配置 &rarr; 管理模板&rarr;系统 &gt;Device Guard &rarr; 打开基于虚拟化的安全性，选择未配置。</p>
+<p>配置好后重启电脑。</p>
+</div>
+</div>
+</div>
+</details>
 
               
               <hr>
