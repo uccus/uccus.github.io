@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#linux" class="md-skip">
+        <a href="#wsl" class="md-skip">
           跳转至
         </a>
       
@@ -451,6 +451,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#wsl" class="md-nav__link">
+    WSL常用命令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#linux" class="md-nav__link">
     Linux常用命令
   </a>
@@ -769,6 +776,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#wsl" class="md-nav__link">
+    WSL常用命令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#linux" class="md-nav__link">
     Linux常用命令
   </a>
@@ -790,14 +804,30 @@
 
   <h1>Linux常用命令</h1>
 
+<h3 id="wsl">WSL常用命令<a class="headerlink" href="#wsl" title="Permanent link">&para;</a></h3>
+<ol>
+<li>列出当前拥有的子系统</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>wsl --list
+</code></pre></div>
+<ol>
+<li>注销删除指定的子系统</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>wsl --unregister ...
+</code></pre></div>
+<ol>
+<li>关闭当前子系统</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>wsl --shutdown
+</code></pre></div>
 <h3 id="linux">Linux常用命令<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h3>
 <ol>
 <li>首次安装，设置管理员密码</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo passwd
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># 输入当前用户密码</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># 输入管理员密码</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># 再次输入管理员密码</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo passwd
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># 输入当前用户密码</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># 输入管理员密码</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1"># 再次输入管理员密码</span>
 </code></pre></div>
 
               
