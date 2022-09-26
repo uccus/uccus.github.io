@@ -51,6 +51,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://uccus.github.io/docs/wsl/%E5%AE%89%E8%A3%85Centos/</loc>
+         <lastmod>2022-09-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://uccus.github.io/docs/wsl/%E5%AE%89%E8%A3%85Docker/</loc>
          <lastmod>2022-09-26</lastmod>
          <changefreq>daily</changefreq>
