@@ -604,15 +604,43 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    证书格式转换及内容查看
+    证书格式
   </a>
   
-    <nav class="md-nav" aria-label="证书格式转换及内容查看">
+    <nav class="md-nav" aria-label="证书格式">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#pemder" class="md-nav__link">
+    pem转换成der
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#derpem" class="md-nav__link">
+    der转换成pem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pempfx" class="md-nav__link">
+    pem的密钥对和证书合并成pfx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pfxpem" class="md-nav__link">
+    pfx转换成pem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    证书格式
+    查看证书中的密钥信息
   </a>
   
 </li>
@@ -883,15 +911,43 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    证书格式转换及内容查看
+    证书格式
   </a>
   
-    <nav class="md-nav" aria-label="证书格式转换及内容查看">
+    <nav class="md-nav" aria-label="证书格式">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#pemder" class="md-nav__link">
+    pem转换成der
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#derpem" class="md-nav__link">
+    der转换成pem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pempfx" class="md-nav__link">
+    pem的密钥对和证书合并成pfx
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pfxpem" class="md-nav__link">
+    pfx转换成pem
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    证书格式
+    查看证书中的密钥信息
   </a>
   
 </li>
@@ -916,9 +972,50 @@
 
   <h1>证书格式转换及内容查看</h1>
 
-<h3 id="_1">证书格式转换及内容查看<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<h4 id="_2">证书格式<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
-<p>​   证书格式有<code>pem</code>，<code>pfx</code>，<code>der</code></p>
+<h4 id="_1">证书格式<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<p>​       不同的标准有不同证书格式，通常有<code>pem</code>，<code>pfx</code>，<code>der</code>，<code>cer</code>，<code>crt</code>等格式。</p>
+<p>​       <code>openssl</code>使用<code>pem</code>来存储各种信息，<code>pem</code>文件中一般包含如下信息：</p>
+<ol>
+<li>
+<p>内容类型，表明存储的是什么类型的内容，以"-----BEGIN XXXXX-----"开头，"-----END XXXXX-----"结尾。</p>
+</li>
+<li>
+<p>信息体，是base64编码后的数据，原内容是<code>der</code>格式的数据</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pem格式存储的证书
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>-----BEGIN CERTIFICATE-----
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>MIIBqTCCAU8CFEIY9r0OtjUYFevSZKeWFMTMIUSiMAoGCCqGSM49BAMCMFcxCzAJ
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>...
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>-----END CERTIFICATE-----
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>pem格式存储的加密后的私钥
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>-----BEGIN ENCRYPTED PRIVATE KEY-----
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>MIHjME4GCSqGSIb3DQEFDTBBMCkGCSqGSIb3DQEFDDAcBAh6nIvL3CPXqgICCAAw
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>...
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>-----END ENCRYPTED PRIVATE KEY-----
+</code></pre></div>
+<p>**<code>der</code>**格式，是<code>ASN1</code>格式存储的二进制数据，<code>pem</code>是用文本报头包围的base64编码的<code>der</code>。</p>
+<p>**<code>pfx</code>**格式，是公钥加密标准 <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/mkdocs-material/issues/12" title="GitHub Issue: squidfunk/mkdocs-material #12">#12</a>，可包含所有私钥，公钥和证书，以二进制数据存储。</p>
+<p><strong><code>cer</code></strong>，一般是指<code>der</code>格式的证书。</p>
+<p><strong><code>crt</code></strong>，证书文件，可以是<code>pem</code>格式。</p>
+<h5 id="pemder">pem转换成der<a class="headerlink" href="#pemder" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>openssl x509 -in sm2-root.pem -inform PEM -outform DER -out sm2-root.der
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>openssl ec -in sm2-key.pem -inform PEM -outform DER -out sm2-key.der
+</code></pre></div>
+<h5 id="derpem">der转换成pem<a class="headerlink" href="#derpem" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>openssl x509 -in sm2-root.der -inform DER -outform PEM -out sm2-root1.pem
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>openssl ec -in sm2-key.der -inform DER -outform PEM -out sm2-key.pem
+</code></pre></div>
+<h5 id="pempfx">pem的密钥对和证书合并成pfx<a class="headerlink" href="#pempfx" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>openssl pkcs12 -export -inkey sm2-key.pem -in sm2-root.pem -out sm2-root.pfx
+</code></pre></div>
+<h5 id="pfxpem">pfx转换成pem<a class="headerlink" href="#pfxpem" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># nodes表示输出的pem中的私钥不需要加密</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>openssl pkcs12 -in sm2-root.pfx -out sm2-root2.pem -nodes
+</code></pre></div>
+<h5 id="_2">查看证书中的密钥信息<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>openssl ec -in sm2-root.pem -text -noout
+</code></pre></div>
 
               
               <hr>
