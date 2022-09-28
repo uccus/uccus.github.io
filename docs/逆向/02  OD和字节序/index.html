@@ -943,7 +943,7 @@
 <p>小端序：<strong>高位字节在高地址保存，低位字节在低地址保存</strong></p>
 <p>网络传输多采用大端序，Intel CPU采用小端序。</p>
 <h3 id="od">OD中的内存顺序<a class="headerlink" href="#od" title="Permanent link">&para;</a></h3>
-<p>例：EAX的值是0x12345678，那么AX是0x5678，AH是0x56， AL是0x78，从右往左对应低位字节到高位字节</p>
+<p>例：<code>EAX</code>的值是<code>0x12345678</code>，那么<code>AX</code>是<code>0x5678</code>，<code>AH</code>是<code>0x56</code>， <code>AL</code>是<code>0x78</code>，从右往左对应低位字节到高位字节</p>
 <p>执行 <code>mov dword [esp], eax</code></p>
 <p><img alt="image_20220928_235543.png" class="img-fluid" src="/others/assets/逆向/image_20220928_235543.png" tag="1" /></p>
 <p>堆栈窗口中的内存顺序</p>
