@@ -733,12 +733,46 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          01  OD常用快捷键记录
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         01  OD常用快捷键记录
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#od" class="md-nav__link">
+    OD常用快捷键记录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#od_1" class="md-nav__link">
+    OD命令
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -866,8 +900,28 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#od" class="md-nav__link">
+    OD常用快捷键记录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#od_1" class="md-nav__link">
+    OD命令
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -880,7 +934,9 @@
               
                 
 
-<h1 id="od">OD常用快捷键记录<a class="headerlink" href="#od" title="Permanent link">&para;</a></h1>
+  <h1>01  OD常用快捷键记录</h1>
+
+<h2 id="od">OD常用快捷键记录<a class="headerlink" href="#od" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -929,6 +985,20 @@
 </tr>
 </tbody>
 </table>
+<h2 id="od_1">OD命令<a class="headerlink" href="#od_1" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 以DWORD形式查看内存</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>dd 0x401000
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># 以WORD形式查看内存</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>dw 0x401000
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># 以BYTE形式查看内存</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>db 0x401000
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># 下断点</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>bp 0x401000
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>bp MessageBoxA
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>bp send
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># 下硬件断点</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>hr 0x401000
+</code></pre></div>
 <p>未完待续。。。</p>
 
               
