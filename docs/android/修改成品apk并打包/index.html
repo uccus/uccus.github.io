@@ -12,14 +12,14 @@
         <meta name="author" content="zangchao">
       
       
-        <link rel="canonical" href="https://uccus.github.io/docs/openssl/%E8%AF%81%E4%B9%A6%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%8F%8A%E5%86%85%E5%AE%B9%E6%9F%A5%E7%9C%8B/">
+        <link rel="canonical" href="https://uccus.github.io/docs/android/%E4%BF%AE%E6%94%B9%E6%88%90%E5%93%81apk%E5%B9%B6%E6%89%93%E5%8C%85/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.1.5">
     
     
       
-        <title>证书格式转换及内容查看 - UCCUS</title>
+        <title>修改成品apk并打包 - UCCUS</title>
       
     
     
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              证书格式转换及内容查看
+              修改成品apk并打包
             
           </span>
         </div>
@@ -555,14 +555,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       
       
@@ -591,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%B9%E5%BC%8F%E7%94%9F%E6%88%90%E8%AF%81%E4%B9%A6/" class="md-nav__link">
+      <a href="../../openssl/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%B9%E5%BC%8F%E7%94%9F%E6%88%90%E8%AF%81%E4%B9%A6/" class="md-nav__link">
         命令行方式生成证书
       </a>
     </li>
@@ -603,110 +601,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          证书格式转换及内容查看
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../openssl/%E8%AF%81%E4%B9%A6%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%8F%8A%E5%86%85%E5%AE%B9%E6%9F%A5%E7%9C%8B/" class="md-nav__link">
         证书格式转换及内容查看
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    证书格式
-  </a>
-  
-    <nav class="md-nav" aria-label="证书格式">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pemder" class="md-nav__link">
-    pem转换成der
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#derpem" class="md-nav__link">
-    der转换成pem
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pempfx" class="md-nav__link">
-    pem的密钥对和证书合并成pfx
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pfxpem" class="md-nav__link">
-    pfx转换成pem
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#p7b" class="md-nav__link">
-    合并成p7b
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#p7bpem" class="md-nav__link">
-    p7b转换成pem
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    查看证书中的密钥信息
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    windows中查看证书路径选项卡
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -724,12 +623,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -754,11 +655,55 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../android/%E4%BF%AE%E6%94%B9%E6%88%90%E5%93%81apk%E5%B9%B6%E6%89%93%E5%8C%85/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          修改成品apk并打包
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         修改成品apk并打包
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    一、准备工具
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    二、操作步骤
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1048,70 +993,15 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    证书格式
-  </a>
-  
-    <nav class="md-nav" aria-label="证书格式">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pemder" class="md-nav__link">
-    pem转换成der
+    一、准备工具
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#derpem" class="md-nav__link">
-    der转换成pem
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pempfx" class="md-nav__link">
-    pem的密钥对和证书合并成pfx
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pfxpem" class="md-nav__link">
-    pfx转换成pem
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#p7b" class="md-nav__link">
-    合并成p7b
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#p7bpem" class="md-nav__link">
-    p7b转换成pem
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    查看证书中的密钥信息
+    二、操作步骤
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    windows中查看证书路径选项卡
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1128,62 +1018,52 @@
               
                 
 
-  <h1>证书格式转换及内容查看</h1>
+  <h1>修改成品apk并打包</h1>
 
-<h4 id="_1">证书格式<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
-<p>​       不同的标准有不同证书格式，通常有<code>pem</code>，<code>pfx</code>，<code>der</code>，<code>cer</code>，<code>crt</code>等格式。</p>
-<p>​       <code>openssl</code>使用<code>pem</code>来存储各种信息，<code>pem</code>文件中一般包含如下信息：</p>
+<blockquote>
+<p>以下内容仅方便开发调试用，无其他用途。引用来自<a href="https://tw511.com/a/01/15111.html">https://tw511.com/a/01/15111.html</a> 和 <a href="https://medium.com/@sandeepcirusanagunla/decompile-and-recompile-an-android-apk-using-apktool-3d84c2055a82">https://medium.com/@sandeepcirusanagunla/decompile-and-recompile-an-android-apk-using-apktool-3d84c2055a82</a></p>
+</blockquote>
+<h3 id="_1">一、准备工具<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p>内容类型，表明存储的是什么类型的内容，以"-----BEGIN XXXXX-----"开头，"-----END XXXXX-----"结尾。</p>
+<p><a href="https://ibotpeaches.github.io/Apktool/">apktool</a> - 用于逆向android apk的工具，方便反编译和打包</p>
 </li>
 <li>
-<p>信息体，是base64编码后的数据，原内容是<code>der</code>格式的数据</p>
+<p>keytool - 创建密钥和证书的java工具，可以在jdk中找到</p>
+</li>
+<li>
+<p>jarsigner - 对JAR/APK文件签名的工具，可以在jdk中找到</p>
+<p>apksigner - 对apk文件签名的工具，可以在android sdk中找到f</p>
+</li>
+<li>
+<p>zipalign - 压缩对齐工具，可以在android sdk中找到</p>
+</li>
+<li>
+<p><a href="https://github.com/pxb1988/dex2jar">dex2jar</a> - 将android dex文件转换为jar文件的工具</p>
 </li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pem格式存储的证书
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>-----BEGIN CERTIFICATE-----
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>MIIBqTCCAU8CFEIY9r0OtjUYFevSZKeWFMTMIUSiMAoGCCqGSM49BAMCMFcxCzAJ
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>...
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>-----END CERTIFICATE-----
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>pem格式存储的加密后的私钥
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>-----BEGIN ENCRYPTED PRIVATE KEY-----
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>MIHjME4GCSqGSIb3DQEFDTBBMCkGCSqGSIb3DQEFDDAcBAh6nIvL3CPXqgICCAAw
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>...
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>-----END ENCRYPTED PRIVATE KEY-----
+<h3 id="_2">二、操作步骤<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># apktool查看具体用法</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># java -jar E:\tools\android\apktool\apktool_2.7.0.jar</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># 反编译apk</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>java -jar E:<span class="se">\t</span>ools<span class="se">\a</span>ndroid<span class="se">\a</span>pktool<span class="se">\a</span>pktool_2.7.0.jar d yourapk.apk
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">########################</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># 修改内容</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># 可以替换lib下的so</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># 可以修改smali中的内容，前提是需要了解smali的语法</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># 可以修改res中的资源文件</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># 可以修改apktool.yml中的版本号</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1">########################</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># 打包apk</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>java -jar E:<span class="se">\t</span>ools<span class="se">\a</span>ndroid<span class="se">\a</span>pktool<span class="se">\a</span>pktool_2.7.0.jar b -f -d yourapk
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># 打包后，apk会输出在yourapk/dist目录</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1"># 压缩对齐</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>E:<span class="se">\t</span>ools<span class="se">\a</span>ndroid<span class="se">\S</span>DK<span class="se">\b</span>uild-tools<span class="se">\s</span>dk版本<span class="se">\z</span>ipalign.exe -v <span class="m">4</span> yourapk/dist/yourapk.apk newname.apk
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1"># apk签名, jarsigner是v1签名，apksigner是v2签名</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1"># 没有keystore需要生成一个</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="c1"># keytool -genkey -v -keystore my-release-key.keystore -alias my-release-key -keyalg RSA -keysize 2048 -validity 10000</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore newname.apk my-release-key
 </code></pre></div>
-<p><strong><code>der</code></strong> 格式，是<code>ASN1</code>格式存储的二进制数据，<code>pem</code>是用文本报头包围的base64编码的<code>der</code>。</p>
-<p><strong><code>pfx</code></strong> 格式，是公钥加密标准 <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/squidfunk/mkdocs-material/issues/12" title="GitHub Issue: squidfunk/mkdocs-material #12">#12</a>，可包含所有私钥，公钥和证书，以二进制数据存储。</p>
-<p><strong><code>cer</code></strong> ，一般是指<code>der</code>格式的证书。</p>
-<p><strong><code>crt</code></strong> ，证书文件，可以是<code>pem</code>格式。</p>
-<p><strong><code>p7b</code></strong> ，文件仅包含证书和链证书，不包含私钥，可以是<code>pem</code>或<code>der</code>格式。</p>
-<h5 id="pemder">pem转换成der<a class="headerlink" href="#pemder" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>openssl x509 -in sm2-root.pem -inform PEM -outform DER -out sm2-root.der
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>openssl ec -in sm2-key.pem -inform PEM -outform DER -out sm2-key.der
-</code></pre></div>
-<h5 id="derpem">der转换成pem<a class="headerlink" href="#derpem" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>openssl x509 -in sm2-root.der -inform DER -outform PEM -out sm2-root1.pem
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>openssl ec -in sm2-key.der -inform DER -outform PEM -out sm2-key.pem
-</code></pre></div>
-<h5 id="pempfx">pem的密钥对和证书合并成pfx<a class="headerlink" href="#pempfx" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>openssl pkcs12 -export -inkey sm2-key.pem -in sm2-root.pem -out sm2-root.pfx
-</code></pre></div>
-<h5 id="pfxpem">pfx转换成pem<a class="headerlink" href="#pfxpem" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># nodes表示输出的pem中的私钥不需要加密</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>openssl pkcs12 -in sm2-root.pfx -out sm2-root2.pem -nodes
-</code></pre></div>
-<h5 id="p7b">合并成p7b<a class="headerlink" href="#p7b" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>openssl crl2pkcs7 -certfile root.pem -certfile subroot.pem -outform DER -out certChain.p7b -nocrl
-</code></pre></div>
-<h5 id="p7bpem">p7b转换成pem<a class="headerlink" href="#p7bpem" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>openssl pkcs7 -print_certs -in certChain.p7b -inform DER 
-</code></pre></div>
-<h5 id="_2">查看证书中的密钥信息<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>openssl ec -in sm2-root.pem -text -noout
-</code></pre></div>
-<h5 id="windows">windows中查看证书路径选项卡<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h5>
-<p>首先，想要在windows中查看证书证书路径选项卡中的内容，必须要是 <strong>rsa</strong> 的证书，sm2的证书windows无法解析，</p>
-<p>其次，根证书需要安装到 <strong>受信任的根证书颁发机构</strong> 。</p>
 
               
               <hr>
@@ -1210,7 +1090,7 @@
     <nav class="md-footer__inner md-grid" aria-label="页脚">
       
         
-        <a href="../%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%B9%E5%BC%8F%E7%94%9F%E6%88%90%E8%AF%81%E4%B9%A6/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 命令行方式生成证书" rel="prev">
+        <a href="../../openssl/%E8%AF%81%E4%B9%A6%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%8F%8A%E5%86%85%E5%AE%B9%E6%9F%A5%E7%9C%8B/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 证书格式转换及内容查看" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1219,20 +1099,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              命令行方式生成证书
+              证书格式转换及内容查看
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../android/%E4%BF%AE%E6%94%B9%E6%88%90%E5%93%81apk%E5%B9%B6%E6%89%93%E5%8C%85/" class="md-footer__link md-footer__link--next" aria-label="下一页: 修改成品apk并打包" rel="next">
+        <a href="../../electron/electron%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/" class="md-footer__link md-footer__link--next" aria-label="下一页: Electron源码编译" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              修改成品apk并打包
+              Electron源码编译
             </div>
           </div>
           <div class="md-footer__button md-icon">
