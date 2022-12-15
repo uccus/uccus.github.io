@@ -1041,28 +1041,35 @@
 <li>
 <p><a href="https://github.com/pxb1988/dex2jar">dex2jar</a> - 将android dex文件转换为jar文件的工具</p>
 </li>
+<li>
+<p><a href="https://github.com/skylot/jadx">jadx</a> - 查看jar包中java源码的工具</p>
+</li>
 </ol>
 <h3 id="_2">二、操作步骤<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># apktool查看具体用法</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># java -jar E:\tools\android\apktool\apktool_2.7.0.jar</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># 反编译apk</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>java -jar E:<span class="se">\t</span>ools<span class="se">\a</span>ndroid<span class="se">\a</span>pktool<span class="se">\a</span>pktool_2.7.0.jar d yourapk.apk
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">########################</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># 修改内容</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># 可以替换lib下的so</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># 可以修改smali中的内容，前提是需要了解smali的语法</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># 可以修改res中的资源文件</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># 可以修改apktool.yml中的版本号</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1">########################</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># 打包apk</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>java -jar E:<span class="se">\t</span>ools<span class="se">\a</span>ndroid<span class="se">\a</span>pktool<span class="se">\a</span>pktool_2.7.0.jar b -f -d yourapk
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># 打包后，apk会输出在yourapk/dist目录</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1"># 压缩对齐</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>E:<span class="se">\t</span>ools<span class="se">\a</span>ndroid<span class="se">\S</span>DK<span class="se">\b</span>uild-tools<span class="se">\s</span>dk版本<span class="se">\z</span>ipalign.exe -v <span class="m">4</span> yourapk/dist/yourapk.apk newname.apk
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1"># apk签名, jarsigner是v1签名，apksigner是v2签名</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1"># 没有keystore需要生成一个</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="c1"># keytool -genkey -v -keystore my-release-key.keystore -alias my-release-key -keyalg RSA -keysize 2048 -validity 10000</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore newname.apk my-release-key
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># 反编译生成jar包</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># E:\tools\android\dex-tools-2.2-SNAPSHOT\d2j-dex2jar.bat yourapk.apk</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># 将jar包丢到jadx中即可查看</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">########################</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># 反编译apk</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>java -jar E:<span class="se">\t</span>ools<span class="se">\a</span>ndroid<span class="se">\a</span>pktool<span class="se">\a</span>pktool_2.7.0.jar d yourapk.apk
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1">########################</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># 修改内容</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># 可以替换lib下的so</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1"># 可以修改smali中的内容，前提是需要了解smali的语法</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># 可以修改res中的资源文件</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># 可以修改apktool.yml中的版本号</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1">########################</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1"># 打包apk</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>java -jar E:<span class="se">\t</span>ools<span class="se">\a</span>ndroid<span class="se">\a</span>pktool<span class="se">\a</span>pktool_2.7.0.jar b -f -d yourapk
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1"># 打包后，apk会输出在yourapk/dist目录</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="c1"># 压缩对齐</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>E:<span class="se">\t</span>ools<span class="se">\a</span>ndroid<span class="se">\S</span>DK<span class="se">\b</span>uild-tools<span class="se">\s</span>dk版本<span class="se">\z</span>ipalign.exe -v <span class="m">4</span> yourapk/dist/yourapk.apk newname.apk
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="c1"># apk签名, jarsigner是v1签名，apksigner是v2签名</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="c1"># 没有keystore需要生成一个</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="c1"># keytool -genkey -v -keystore my-release-key.keystore -alias my-release-key -keyalg RSA -keysize 2048 -validity 10000</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore newname.apk my-release-key
 </code></pre></div>
 
               
