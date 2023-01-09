@@ -872,19 +872,71 @@
         
           
         
-          
-        
-          
-        
       
       
         <label class="md-nav__link" for="__nav_8">
+          调试篇
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="调试篇" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          调试篇
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B0%83%E8%AF%95%E7%AF%87/windbg%E5%92%8Ccdb/" class="md-nav__link">
+        Windbg和cdb
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_9">
           逆向
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="逆向" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           逆向
         </label>
@@ -949,7 +1001,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
       
       
       
@@ -962,13 +1014,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_9">
+        <label class="md-nav__link" for="__nav_10">
           杂记
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="杂记" data-md-level="1">
-        <label class="md-nav__title" for="__nav_9">
+        <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           杂记
         </label>
@@ -1158,28 +1210,28 @@
 <p><strong><code>crt</code></strong> ，证书文件，可以是<code>pem</code>格式。</p>
 <p><strong><code>p7b</code></strong> ，文件仅包含证书和链证书，不包含私钥，可以是<code>pem</code>或<code>der</code>格式。</p>
 <h5 id="pemder">pem转换成der<a class="headerlink" href="#pemder" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>openssl x509 -in sm2-root.pem -inform PEM -outform DER -out sm2-root.der
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>openssl ec -in sm2-key.pem -inform PEM -outform DER -out sm2-key.der
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>openssl<span class="w"> </span>x509<span class="w"> </span>-in<span class="w"> </span>sm2-root.pem<span class="w"> </span>-inform<span class="w"> </span>PEM<span class="w"> </span>-outform<span class="w"> </span>DER<span class="w"> </span>-out<span class="w"> </span>sm2-root.der
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>openssl<span class="w"> </span>ec<span class="w"> </span>-in<span class="w"> </span>sm2-key.pem<span class="w"> </span>-inform<span class="w"> </span>PEM<span class="w"> </span>-outform<span class="w"> </span>DER<span class="w"> </span>-out<span class="w"> </span>sm2-key.der
 </code></pre></div>
 <h5 id="derpem">der转换成pem<a class="headerlink" href="#derpem" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>openssl x509 -in sm2-root.der -inform DER -outform PEM -out sm2-root1.pem
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>openssl ec -in sm2-key.der -inform DER -outform PEM -out sm2-key.pem
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>openssl<span class="w"> </span>x509<span class="w"> </span>-in<span class="w"> </span>sm2-root.der<span class="w"> </span>-inform<span class="w"> </span>DER<span class="w"> </span>-outform<span class="w"> </span>PEM<span class="w"> </span>-out<span class="w"> </span>sm2-root1.pem
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>openssl<span class="w"> </span>ec<span class="w"> </span>-in<span class="w"> </span>sm2-key.der<span class="w"> </span>-inform<span class="w"> </span>DER<span class="w"> </span>-outform<span class="w"> </span>PEM<span class="w"> </span>-out<span class="w"> </span>sm2-key.pem
 </code></pre></div>
 <h5 id="pempfx">pem的密钥对和证书合并成pfx<a class="headerlink" href="#pempfx" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>openssl pkcs12 -export -inkey sm2-key.pem -in sm2-root.pem -out sm2-root.pfx
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>openssl<span class="w"> </span>pkcs12<span class="w"> </span>-export<span class="w"> </span>-inkey<span class="w"> </span>sm2-key.pem<span class="w"> </span>-in<span class="w"> </span>sm2-root.pem<span class="w"> </span>-out<span class="w"> </span>sm2-root.pfx
 </code></pre></div>
 <h5 id="pfxpem">pfx转换成pem<a class="headerlink" href="#pfxpem" title="Permanent link">&para;</a></h5>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># nodes表示输出的pem中的私钥不需要加密</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>openssl pkcs12 -in sm2-root.pfx -out sm2-root2.pem -nodes
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>openssl<span class="w"> </span>pkcs12<span class="w"> </span>-in<span class="w"> </span>sm2-root.pfx<span class="w"> </span>-out<span class="w"> </span>sm2-root2.pem<span class="w"> </span>-nodes
 </code></pre></div>
 <h5 id="p7b">合并成p7b<a class="headerlink" href="#p7b" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>openssl crl2pkcs7 -certfile root.pem -certfile subroot.pem -outform DER -out certChain.p7b -nocrl
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>openssl<span class="w"> </span>crl2pkcs7<span class="w"> </span>-certfile<span class="w"> </span>root.pem<span class="w"> </span>-certfile<span class="w"> </span>subroot.pem<span class="w"> </span>-outform<span class="w"> </span>DER<span class="w"> </span>-out<span class="w"> </span>certChain.p7b<span class="w"> </span>-nocrl
 </code></pre></div>
 <h5 id="p7bpem">p7b转换成pem<a class="headerlink" href="#p7bpem" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>openssl pkcs7 -print_certs -in certChain.p7b -inform DER 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>openssl<span class="w"> </span>pkcs7<span class="w"> </span>-print_certs<span class="w"> </span>-in<span class="w"> </span>certChain.p7b<span class="w"> </span>-inform<span class="w"> </span>DER<span class="w"> </span>
 </code></pre></div>
 <h5 id="_2">查看证书中的密钥信息<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h5>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>openssl ec -in sm2-root.pem -text -noout
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>openssl<span class="w"> </span>ec<span class="w"> </span>-in<span class="w"> </span>sm2-root.pem<span class="w"> </span>-text<span class="w"> </span>-noout
 </code></pre></div>
 <h5 id="windows">windows中查看证书路径选项卡<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h5>
 <p>首先，想要在windows中查看证书证书路径选项卡中的内容，必须要是 <strong>rsa</strong> 的证书，sm2的证书windows无法解析，</p>

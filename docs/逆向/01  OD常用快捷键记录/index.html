@@ -759,6 +759,58 @@
 
   
   
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          调试篇
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="调试篇" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          调试篇
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B0%83%E8%AF%95%E7%AF%87/windbg%E5%92%8Ccdb/" class="md-nav__link">
+        Windbg和cdb
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -766,7 +818,7 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
       
       
       
@@ -779,13 +831,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_9">
           逆向
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="逆向" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           逆向
         </label>
@@ -894,7 +946,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
       
       
       
@@ -907,13 +959,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_9">
+        <label class="md-nav__link" for="__nav_10">
           杂记
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="杂记" data-md-level="1">
-        <label class="md-nav__title" for="__nav_9">
+        <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           杂记
         </label>
@@ -1082,17 +1134,17 @@
 <span class="normal"><a href="#__codelineno-0-10">10</a></span>
 <span class="normal"><a href="#__codelineno-0-11">11</a></span>
 <span class="normal"><a href="#__codelineno-0-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 以DWORD形式查看内存</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>dd 0x401000
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>dd<span class="w"> </span>0x401000
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1"># 以WORD形式查看内存</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>dw 0x401000
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>dw<span class="w"> </span>0x401000
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c1"># 以BYTE形式查看内存</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>db 0x401000
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>db<span class="w"> </span>0x401000
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1"># 下断点</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a>bp 0x401000
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>bp MessageBoxA
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a>bp send
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>bp<span class="w"> </span>0x401000
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>bp<span class="w"> </span>MessageBoxA
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>bp<span class="w"> </span>send
 <a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c1"># 下硬件断点</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a>hr 0x401000
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>hr<span class="w"> </span>0x401000
 </code></pre></div></td></tr></table></div>
 <p>未完待续。。。</p>
 
@@ -1121,7 +1173,7 @@
     <nav class="md-footer__inner md-grid" aria-label="页脚">
       
         
-        <a href="../../electron/electron%E5%A6%82%E4%BD%95%E8%B0%83%E7%94%A8chromium%E4%BB%A3%E7%A0%81/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Electron如何调用chromium代码" rel="prev">
+        <a href="../../%E8%B0%83%E8%AF%95%E7%AF%87/windbg%E5%92%8Ccdb/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Windbg和cdb" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1130,7 +1182,7 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              Electron如何调用chromium代码
+              Windbg和cdb
             </div>
           </div>
         </a>

@@ -759,6 +759,58 @@
 
   
   
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          调试篇
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="调试篇" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          调试篇
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%B0%83%E8%AF%95%E7%AF%87/windbg%E5%92%8Ccdb/" class="md-nav__link">
+        Windbg和cdb
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -766,7 +818,7 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" checked>
       
       
       
@@ -779,13 +831,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_8">
+        <label class="md-nav__link" for="__nav_9">
           逆向
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="逆向" data-md-level="1">
-        <label class="md-nav__title" for="__nav_8">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           逆向
         </label>
@@ -929,7 +981,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
       
       
       
@@ -942,13 +994,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_9">
+        <label class="md-nav__link" for="__nav_10">
           杂记
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="杂记" data-md-level="1">
-        <label class="md-nav__title" for="__nav_9">
+        <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           杂记
         </label>
@@ -1105,19 +1157,19 @@
 <span class="normal"><a href="#__codelineno-0-12">12</a></span>
 <span class="normal"><a href="#__codelineno-0-13">13</a></span>
 <span class="normal"><a href="#__codelineno-0-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># x86</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>ebp + 4h: 函数返回地址
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a>ebp + 8h: 函数第一个参数
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>ebp + 0Ch: 函数第二个参数
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>ebp - 4h: 函数内部第一个局部变量
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>ebp - 8h: 函数内部第二个局部变量
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>ebp<span class="w"> </span>+<span class="w"> </span>4h:<span class="w"> </span>函数返回地址
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>ebp<span class="w"> </span>+<span class="w"> </span>8h:<span class="w"> </span>函数第一个参数
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>ebp<span class="w"> </span>+<span class="w"> </span>0Ch:<span class="w"> </span>函数第二个参数
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>ebp<span class="w"> </span>-<span class="w"> </span>4h:<span class="w"> </span>函数内部第一个局部变量
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>ebp<span class="w"> </span>-<span class="w"> </span>8h:<span class="w"> </span>函数内部第二个局部变量
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1"># 全局变量</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a>mov 寄存器, byte/word/dword ptr ds:<span class="o">[</span>0x12345678<span class="o">]</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>mov<span class="w"> </span>寄存器,<span class="w"> </span>byte/word/dword<span class="w"> </span>ptr<span class="w"> </span>ds:<span class="o">[</span>0x12345678<span class="o">]</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="c1"># 带符号位的扩展</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a>movsx cx, al
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>movsx<span class="w"> </span>cx,<span class="w"> </span>al
 <a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c1"># 补零扩展</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a>movzx cx, al
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>movzx<span class="w"> </span>cx,<span class="w"> </span>al
 <a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="c1"># 疑似switch语句</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a>jmp dword ptr <span class="o">[</span>edx * <span class="m">4</span> + 401000h<span class="o">]</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>jmp<span class="w"> </span>dword<span class="w"> </span>ptr<span class="w"> </span><span class="o">[</span>edx<span class="w"> </span>*<span class="w"> </span><span class="m">4</span><span class="w"> </span>+<span class="w"> </span>401000h<span class="o">]</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="_2">栈帧技术<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
@@ -1140,47 +1192,47 @@
 <span class="normal"><a href="#__codelineno-1-18">18</a></span>
 <span class="normal"><a href="#__codelineno-1-19">19</a></span>
 <span class="normal"><a href="#__codelineno-1-20">20</a></span>
-<span class="normal"><a href="#__codelineno-1-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>push    ebp                 // 提升堆栈，分配栈空间       
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>mov     ebp, esp
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>sub     esp, 40h
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a>push    ebx                 // 保留现场
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>push    esi
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>push    edi
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>lea     edi, <span class="o">[</span>ebp-40h<span class="o">]</span>       // 初始化栈内数据
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>mov     ecx, 10h
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a>mov     eax, 0CCCCCCCCh
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a>rep stos dword ptr <span class="o">[</span>edi<span class="o">]</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a>push    <span class="m">4</span>                   // 第二个参数入栈
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a>push    <span class="m">3</span>                   // 第一个参数入栈
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>call    add                 // 调用add函数
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a>add     esp,0Ch             // 平衡add函数堆栈
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a>pop     edi                 // 恢复现场
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a>pop     esi
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a>pop     ebx
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a>add     esp, 40h            // 降低堆栈
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a>mov     esp, ebp            // 恢复栈底
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a>pop     ebp
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a>retn                        // 返回到调用处
+<span class="normal"><a href="#__codelineno-1-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>push<span class="w">    </span>ebp<span class="w">                 </span>//<span class="w"> </span>提升堆栈，分配栈空间<span class="w">       </span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>mov<span class="w">     </span>ebp,<span class="w"> </span>esp
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>sub<span class="w">     </span>esp,<span class="w"> </span>40h
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>push<span class="w">    </span>ebx<span class="w">                 </span>//<span class="w"> </span>保留现场
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>push<span class="w">    </span>esi
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>push<span class="w">    </span>edi
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>lea<span class="w">     </span>edi,<span class="w"> </span><span class="o">[</span>ebp-40h<span class="o">]</span><span class="w">       </span>//<span class="w"> </span>初始化栈内数据
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>mov<span class="w">     </span>ecx,<span class="w"> </span>10h
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>mov<span class="w">     </span>eax,<span class="w"> </span>0CCCCCCCCh
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>rep<span class="w"> </span>stos<span class="w"> </span>dword<span class="w"> </span>ptr<span class="w"> </span><span class="o">[</span>edi<span class="o">]</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>push<span class="w">    </span><span class="m">4</span><span class="w">                   </span>//<span class="w"> </span>第二个参数入栈
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>push<span class="w">    </span><span class="m">3</span><span class="w">                   </span>//<span class="w"> </span>第一个参数入栈
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>call<span class="w">    </span>add<span class="w">                 </span>//<span class="w"> </span>调用add函数
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>add<span class="w">     </span>esp,0Ch<span class="w">             </span>//<span class="w"> </span>平衡add函数堆栈
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>pop<span class="w">     </span>edi<span class="w">                 </span>//<span class="w"> </span>恢复现场
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>pop<span class="w">     </span>esi
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>pop<span class="w">     </span>ebx
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>add<span class="w">     </span>esp,<span class="w"> </span>40h<span class="w">            </span>//<span class="w"> </span>降低堆栈
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a>mov<span class="w">     </span>esp,<span class="w"> </span>ebp<span class="w">            </span>//<span class="w"> </span>恢复栈底
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a>pop<span class="w">     </span>ebp
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>retn<span class="w">                        </span>//<span class="w"> </span>返回到调用处
 </code></pre></div></td></tr></table></div>
 <h2 id="_3">判断函数参数个数<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># 一般情况</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># 第一步：观察调用处的代码</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>push <span class="m">3</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>push <span class="m">2</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>push <span class="m">1</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>call 0x401000
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>push<span class="w"> </span><span class="m">3</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>push<span class="w"> </span><span class="m">2</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>push<span class="w"> </span><span class="m">1</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>call<span class="w"> </span>0x401000
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># 第二步：观察平衡堆栈的代码</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>call 0x401000
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>add esp, 0Ch        <span class="c1"># 外平栈, __cdecl</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>call<span class="w"> </span>0x401000
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>add<span class="w"> </span>esp,<span class="w"> </span>0Ch<span class="w">        </span><span class="c1"># 外平栈, __cdecl</span>
 <a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1"># 或者函数内部</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>ret 0Ch             <span class="c1"># 内平栈, __stdcall</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>ret<span class="w"> </span>0Ch<span class="w">             </span><span class="c1"># 内平栈, __stdcall</span>
 </code></pre></div>
 <h2 id="_4">函数内部功能分析步骤<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="m">1</span>. 分析参数
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="m">2</span>. 分析局部变量
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="m">3</span>. 分析全局变量
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="m">4</span>. 功能分析
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="m">5</span>. 返回值分析
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="m">1</span>.<span class="w"> </span>分析参数
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="m">2</span>.<span class="w"> </span>分析局部变量
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="m">3</span>.<span class="w"> </span>分析全局变量
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="m">4</span>.<span class="w"> </span>功能分析
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="m">5</span>.<span class="w"> </span>返回值分析
 </code></pre></div>
 <h2 id="do-while">do while循环<a class="headerlink" href="#do-while" title="Permanent link">&para;</a></h2>
 <p><img alt="image_20221007_194418.png" class="img-fluid" src="/others/assets/逆向/image_20221007_194418.png" tag="1" /></p>
