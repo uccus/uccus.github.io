@@ -1210,14 +1210,16 @@
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1"># 显示局部变量</span>
 <a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>dv
 <a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>dv<span class="w"> </span>-t<span class="w">  </span><span class="c1"># 显示局部变量的类型</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="c1"># 比较内存，相同则没有输出，不同会显示地址信息</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>c<span class="w"> </span>变量或地址<span class="w">  </span>L长度<span class="w">   </span>变量或地址
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="c1"># 填充内存</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>f<span class="w"> </span>变量或地址<span class="w">  </span>L长度<span class="w">   </span>值
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c1"># 移动内存，复制内存</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>m<span class="w"> </span>变量或地址<span class="w">  </span>L长度<span class="w">    </span>源变量或地址
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="c1"># 编辑内存</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>e*
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="c1"># 显示c++表达式，在看结构体变量时非常方便</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>dx<span class="w"> </span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="c1"># 比较内存，相同则没有输出，不同会显示地址信息</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>c<span class="w"> </span>变量或地址<span class="w">  </span>L长度<span class="w">   </span>变量或地址
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="c1"># 填充内存</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>f<span class="w"> </span>变量或地址<span class="w">  </span>L长度<span class="w">   </span>值
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="c1"># 移动内存，复制内存</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>m<span class="w"> </span>变量或地址<span class="w">  </span>L长度<span class="w">    </span>源变量或地址
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="c1"># 编辑内存</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>e*
 </code></pre></div>
 <h4 id="_7">其他<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># 重复上条指令</span>
@@ -1226,22 +1228,27 @@
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>.cls
 <a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="c1"># 显示堆栈回溯</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>k
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># 计算c++表达式，结合dt使用比较方便</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>??<span class="w"> </span>sizeof<span class="o">(</span>var1<span class="o">)</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>??<span class="w"> </span>data.t1
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>??<span class="w"> </span>data.t1-&gt;t2
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="c1"># 列出当前模块</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>lm
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="c1"># 设置当前数字进制</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>n<span class="w"> </span><span class="m">8</span>/10/16
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="c1"># 查看寄存器</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>r
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="c1"># 源代码相关</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>lsc<span class="w">     </span><span class="c1"># 列出当前源</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>ls<span class="w">      </span><span class="c1"># 显示当前源代码</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>l+,l-<span class="w">   </span><span class="c1"># 设置源选项</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>l+t,l+s,l+o
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>l-t,l-s,l-o
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># 切换当前堆栈上下文</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>.frame<span class="w"> </span>堆栈编号
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="c1"># 计算c++表达式，结合dt使用比较方便</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>??<span class="w"> </span>sizeof<span class="o">(</span>var1<span class="o">)</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>??<span class="w"> </span>data.t1
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>??<span class="w"> </span>data.t1-&gt;t2
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="c1"># 列出当前模块</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>lm
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="c1"># 设置当前数字进制</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>n<span class="w"> </span><span class="m">8</span>/10/16
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="c1"># 查看寄存器</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>r
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="c1"># 源代码相关</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>lsc<span class="w">     </span><span class="c1"># 列出当前源</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>ls<span class="w">      </span><span class="c1"># 显示当前源代码</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>l+,l-<span class="w">   </span><span class="c1"># 设置源选项</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>l+t,l+s,l+o
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>l-t,l-s,l-o
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="c1"># 查看进程环境信息</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>!peb
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>dt<span class="w"> </span>ntdll!_PEB<span class="w">  </span><span class="c1"># 查看某模块的环境信息</span>
 </code></pre></div>
 
               
