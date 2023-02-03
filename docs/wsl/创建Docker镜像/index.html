@@ -12,19 +12,21 @@
         <meta name="author" content="zangchao">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="canonical" href="https://uccus.github.io/docs/wsl/%E5%88%9B%E5%BB%BADocker%E9%95%9C%E5%83%8F/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.1.5">
     
     
       
-        <title>UCCUS</title>
+        <title>创建Docker镜像 - UCCUS</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.ee0f47ba.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ee0f47ba.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.e6a45f82.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -38,13 +40,13 @@
       
     
     
-      <link rel="stylesheet" href="/others/stylesheets/main.css">
+      <link rel="stylesheet" href="../../../others/stylesheets/main.css">
     
-      <link rel="stylesheet" href="/others/stylesheets/extensions.css">
+      <link rel="stylesheet" href="../../../others/stylesheets/extensions.css">
     
-      <link rel="stylesheet" href="/others/stylesheets/simplelightbox.min.css">
+      <link rel="stylesheet" href="../../../others/stylesheets/simplelightbox.min.css">
     
-    <script>__md_scope=new URL("/",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -81,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="/." title="UCCUS" class="md-header__button md-logo" aria-label="UCCUS" data-md-component="logo">
+    <a href="../../.." title="UCCUS" class="md-header__button md-logo" aria-label="UCCUS" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -105,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              创建Docker镜像
             
           </span>
         </div>
@@ -199,7 +206,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="UCCUS" class="md-nav__button md-logo" aria-label="UCCUS" data-md-component="logo">
+    <a href="../../.." title="UCCUS" class="md-nav__button md-logo" aria-label="UCCUS" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
@@ -235,7 +242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         主页
       </a>
     </li>
@@ -286,7 +293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/1.%20%E5%BB%BA%E7%AB%99%E6%80%9D%E8%B7%AF/" class="md-nav__link">
+      <a href="../../%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/1.%20%E5%BB%BA%E7%AB%99%E6%80%9D%E8%B7%AF/" class="md-nav__link">
         1. 建站思路
       </a>
     </li>
@@ -300,7 +307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/2.%20MkDocs%E7%94%9F%E6%88%90%E7%AB%99%E7%82%B9/" class="md-nav__link">
+      <a href="../../%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/2.%20MkDocs%E7%94%9F%E6%88%90%E7%AB%99%E7%82%B9/" class="md-nav__link">
         2. MkDocs生成站点
       </a>
     </li>
@@ -314,7 +321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/3.%20GitHub%E6%89%98%E7%AE%A1%E7%AB%99%E7%82%B9/" class="md-nav__link">
+      <a href="../../%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/3.%20GitHub%E6%89%98%E7%AE%A1%E7%AB%99%E7%82%B9/" class="md-nav__link">
         3. GitHub托管站点
       </a>
     </li>
@@ -328,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/4.%20CDN%E5%8A%A0%E9%80%9F%E7%AB%99%E7%82%B9/" class="md-nav__link">
+      <a href="../../%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/4.%20CDN%E5%8A%A0%E9%80%9F%E7%AB%99%E7%82%B9/" class="md-nav__link">
         4. CDN加速站点
       </a>
     </li>
@@ -348,12 +355,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -390,7 +399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/wsl/%E5%AE%89%E8%A3%85Ubuntu/" class="md-nav__link">
+      <a href="../%E5%AE%89%E8%A3%85Ubuntu/" class="md-nav__link">
         安装Ubuntu
       </a>
     </li>
@@ -404,7 +413,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/wsl/%E5%AE%89%E8%A3%85Docker/" class="md-nav__link">
+      <a href="../%E5%AE%89%E8%A3%85Docker/" class="md-nav__link">
         安装Docker
       </a>
     </li>
@@ -418,7 +427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/wsl/%E5%AE%89%E8%A3%85Centos/" class="md-nav__link">
+      <a href="../%E5%AE%89%E8%A3%85Centos/" class="md-nav__link">
         安装Centos
       </a>
     </li>
@@ -432,7 +441,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/wsl/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="md-nav__link">
+      <a href="../Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="md-nav__link">
         Linux常用命令
       </a>
     </li>
@@ -446,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/wsl/vim%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/" class="md-nav__link">
+      <a href="../vim%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/" class="md-nav__link">
         Vim高级技巧
       </a>
     </li>
@@ -458,11 +467,76 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/docs/wsl/%E5%88%9B%E5%BB%BADocker%E9%95%9C%E5%83%8F/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          创建Docker镜像
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         创建Docker镜像
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    推荐方式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerfile" class="md-nav__link">
+    一、准备dockerfile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    二、生成镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    三、发布镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -516,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/python/%E4%BF%AE%E6%94%B9%E4%B8%8B%E8%BD%BD%E6%BA%90/" class="md-nav__link">
+      <a href="../../python/%E4%BF%AE%E6%94%B9%E4%B8%8B%E8%BD%BD%E6%BA%90/" class="md-nav__link">
         修改下载源
       </a>
     </li>
@@ -530,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/python/Anaconda%E7%AE%A1%E7%90%86/" class="md-nav__link">
+      <a href="../../python/Anaconda%E7%AE%A1%E7%90%86/" class="md-nav__link">
         Anaconda管理
       </a>
     </li>
@@ -544,7 +618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/python/Mamba%E7%AE%A1%E7%90%86/" class="md-nav__link">
+      <a href="../../python/Mamba%E7%AE%A1%E7%90%86/" class="md-nav__link">
         Mamba管理
       </a>
     </li>
@@ -598,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/openssl/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%B9%E5%BC%8F%E7%94%9F%E6%88%90%E8%AF%81%E4%B9%A6/" class="md-nav__link">
+      <a href="../../openssl/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%B9%E5%BC%8F%E7%94%9F%E6%88%90%E8%AF%81%E4%B9%A6/" class="md-nav__link">
         命令行方式生成证书
       </a>
     </li>
@@ -612,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/openssl/%E8%AF%81%E4%B9%A6%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%8F%8A%E5%86%85%E5%AE%B9%E6%9F%A5%E7%9C%8B/" class="md-nav__link">
+      <a href="../../openssl/%E8%AF%81%E4%B9%A6%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%8F%8A%E5%86%85%E5%AE%B9%E6%9F%A5%E7%9C%8B/" class="md-nav__link">
         证书格式转换及内容查看
       </a>
     </li>
@@ -664,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/android/%E4%BF%AE%E6%94%B9%E6%88%90%E5%93%81apk%E5%B9%B6%E6%89%93%E5%8C%85/" class="md-nav__link">
+      <a href="../../android/%E4%BF%AE%E6%94%B9%E6%88%90%E5%93%81apk%E5%B9%B6%E6%89%93%E5%8C%85/" class="md-nav__link">
         修改成品apk并打包
       </a>
     </li>
@@ -720,7 +794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/electron/electron%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/" class="md-nav__link">
+      <a href="../../electron/electron%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/" class="md-nav__link">
         Electron源码编译
       </a>
     </li>
@@ -734,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/electron/electron%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98/" class="md-nav__link">
+      <a href="../../electron/electron%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98/" class="md-nav__link">
         Electron编译过程中的问题
       </a>
     </li>
@@ -748,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/electron/electron%E5%A6%82%E4%BD%95%E8%B0%83%E7%94%A8chromium%E4%BB%A3%E7%A0%81/" class="md-nav__link">
+      <a href="../../electron/electron%E5%A6%82%E4%BD%95%E8%B0%83%E7%94%A8chromium%E4%BB%A3%E7%A0%81/" class="md-nav__link">
         Electron如何调用chromium代码
       </a>
     </li>
@@ -804,7 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/%E8%B0%83%E8%AF%95%E7%AF%87/windbg%E5%92%8Ccdb/" class="md-nav__link">
+      <a href="../../%E8%B0%83%E8%AF%95%E7%AF%87/windbg%E5%92%8Ccdb/" class="md-nav__link">
         Windbg和cdb
       </a>
     </li>
@@ -818,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/%E8%B0%83%E8%AF%95%E7%AF%87/gdb/" class="md-nav__link">
+      <a href="../../%E8%B0%83%E8%AF%95%E7%AF%87/gdb/" class="md-nav__link">
         Gdb
       </a>
     </li>
@@ -832,7 +906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/%E8%B0%83%E8%AF%95%E7%AF%87/lldb/" class="md-nav__link">
+      <a href="../../%E8%B0%83%E8%AF%95%E7%AF%87/lldb/" class="md-nav__link">
         Lldb
       </a>
     </li>
@@ -888,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/%E9%80%86%E5%90%91/01%20%20OD%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%AE%B0%E5%BD%95/" class="md-nav__link">
+      <a href="../../%E9%80%86%E5%90%91/01%20%20OD%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%AE%B0%E5%BD%95/" class="md-nav__link">
         01  OD常用快捷键记录
       </a>
     </li>
@@ -902,7 +976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/%E9%80%86%E5%90%91/02%20%20OD%E5%92%8C%E5%AD%97%E8%8A%82%E5%BA%8F/" class="md-nav__link">
+      <a href="../../%E9%80%86%E5%90%91/02%20%20OD%E5%92%8C%E5%AD%97%E8%8A%82%E5%BA%8F/" class="md-nav__link">
         02  OD和字节序
       </a>
     </li>
@@ -916,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/%E9%80%86%E5%90%91/03%20%20%E6%B1%87%E7%BC%96%E5%B8%B8%E7%94%A8%E5%B0%8F%E7%9F%A5%E8%AF%86/" class="md-nav__link">
+      <a href="../../%E9%80%86%E5%90%91/03%20%20%E6%B1%87%E7%BC%96%E5%B8%B8%E7%94%A8%E5%B0%8F%E7%9F%A5%E8%AF%86/" class="md-nav__link">
         03  汇编常用小知识
       </a>
     </li>
@@ -972,7 +1046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/%E6%9D%82%E8%AE%B0/markdown%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+      <a href="../../%E6%9D%82%E8%AE%B0/markdown%E8%AF%AD%E6%B3%95/" class="md-nav__link">
         Markdown语法
       </a>
     </li>
@@ -986,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/%E6%9D%82%E8%AE%B0/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%96%B9%E6%B3%95/" class="md-nav__link">
+      <a href="../../%E6%9D%82%E8%AE%B0/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%96%B9%E6%B3%95/" class="md-nav__link">
         科学上网方法
       </a>
     </li>
@@ -1000,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/docs/%E6%9D%82%E8%AE%B0/%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%B3%95/" class="md-nav__link">
+      <a href="../../%E6%9D%82%E8%AE%B0/%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%B3%95/" class="md-nav__link">
         全局代理设置方法
       </a>
     </li>
@@ -1021,12 +1095,106 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    推荐方式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dockerfile" class="md-nav__link">
+    一、准备dockerfile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    二、生成镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    三、发布镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
 
+  <h1>创建Docker镜像</h1>
+
+<h3 id="_1">推荐方式<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>准备dockerfile</li>
+<li>生成镜像</li>
+<li>发布镜像</li>
+</ol>
+<h3 id="dockerfile">一、准备dockerfile<a class="headerlink" href="#dockerfile" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c"># 拉取基本镜像</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu:18.04</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c"># 设置环境变量</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">ENV</span><span class="w"> </span>LANG<span class="w"> </span>C.UTF-8
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c"># 额外的拷贝工作</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">COPY</span><span class="w"> </span>sources.list<span class="w">  </span>/etc/apt/sources.list
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c"># 需要运行的命令</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>build-essential<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>curl<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>cmake<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>clean
+</code></pre></div>
+<h3 id="_2">二、生成镜像<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>git.xxx.com:4567/projectName:tagName<span class="w">  </span>dockerfile所在目录
+</code></pre></div>
+<h3 id="_3">三、发布镜像<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># 登录，使用gitlab用户名密码</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>docker<span class="w"> </span>login<span class="w"> </span>git.xxx.com:4567
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># 发布</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>docker<span class="w"> </span>push<span class="w"> </span>git.xxx.com:4567/projectName:tagName
+</code></pre></div>
+<h3 id="_4"><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+
+              
               <hr>
               <span id="busuanzi_container_page_pv">
                 <font size="3" color="grey">本文总阅读量
@@ -1047,6 +1215,41 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="页脚">
+      
+        
+        <a href="../vim%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Vim高级技巧" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              Vim高级技巧
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../python/%E4%BF%AE%E6%94%B9%E4%B8%8B%E8%BD%BD%E6%BA%90/" class="md-footer__link md-footer__link--next" aria-label="下一页: 修改下载源" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              修改下载源
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1072,20 +1275,20 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "/assets/javascripts/workers/search.b6ff8c07.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.b6ff8c07.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.5e13d264.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.5e13d264.min.js"></script>
       
-        <script src="/others/javascripts/jquery-1.10.2.min.js"></script>
+        <script src="../../../others/javascripts/jquery-1.10.2.min.js"></script>
       
         <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
       
-        <script src="/others/javascripts/mathjax.js"></script>
+        <script src="../../../others/javascripts/mathjax.js"></script>
       
-        <script src="/others/javascripts/extension.js"></script>
+        <script src="../../../others/javascripts/extension.js"></script>
       
-        <script src="/others/javascripts/simple-lightbox.min.js"></script>
+        <script src="../../../others/javascripts/simple-lightbox.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
