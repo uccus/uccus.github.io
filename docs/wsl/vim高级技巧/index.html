@@ -1161,122 +1161,116 @@
 <h3 id="neovim">neovim<a class="headerlink" href="#neovim" title="Permanent link">&para;</a></h3>
 <p>配置文件名为<code>init.vim</code>，路径在<code>C:\users\xxx\AppData\Local\nvim</code>中。</p>
 <p><code>vim-plug</code>配置文件名为<code>plug.vim</code>，路径在<code>C:\users\xxx\AppData\Local\nvim\autoload</code>中。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="s2">&quot; set pythonthreedll=D:/mambaforge/python310.dll</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="s2">&quot;</span><span class="w"> </span>插件
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>call<span class="w"> </span>plug#begin<span class="o">()</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span>Plug<span class="w"> </span><span class="s1">&#39;preservim/nerdtree&#39;</span><span class="w">                   </span><span class="s2">&quot;目录树</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="s2">        &quot;</span><span class="w"> </span>Plug<span class="w"> </span><span class="s1">&#39;vim-airline/vim-airline&#39;</span><span class="w">              </span><span class="s2">&quot;主题相关</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="s2">        &quot;</span><span class="w"> </span>Plug<span class="w"> </span><span class="s1">&#39;vim-airline/vim-airline-themes&#39;</span><span class="w">       </span><span class="s2">&quot;主题相关</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="s2">        Plug &#39;preservim/nerdcommenter&#39;              &quot;</span>批量注释
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span>Plug<span class="w"> </span><span class="s1">&#39;mhinz/vim-startify&#39;</span><span class="w">                   </span><span class="s2">&quot;最近使用文件</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="s2">        Plug &#39;tpope/vim-fugitive&#39;                   &quot;</span>git命令相关
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span>Plug<span class="w"> </span><span class="s1">&#39;tpope/vim-surround&#39;</span><span class="w">                   </span><span class="s2">&quot;单词周围符号对</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="s2">        &quot;</span>Plug<span class="w"> </span><span class="s1">&#39;scrooloose/syntastic&#39;</span><span class="w">                </span><span class="s2">&quot;语法检查</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="s2">        Plug &#39;rust-lang/rust.vim&#39;                   &quot;</span>rust支持
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span>Plug<span class="w"> </span><span class="s1">&#39;majutsushi/tagbar&#39;</span><span class="w">                    </span><span class="s2">&quot;标签栏支持</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="s2">        &quot;</span>Plug<span class="w"> </span><span class="s1">&#39;w0rp/ale&#39;</span><span class="w">                             </span><span class="s2">&quot;异步语法检查</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="s2">        Plug &#39;octol/vim-cpp-enhanced-highlight&#39;     &quot;</span>c++语法高亮
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span>Plug<span class="w"> </span><span class="s1">&#39;jiangmiao/auto-pairs&#39;</span><span class="w">                 </span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">        </span><span class="s2">&quot; Plug &#39;Yggdroot/LeaderF&#39;, { &#39;do&#39;: &#39;./install.sh&#39; } &quot;</span>模糊查找
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">        </span>Plug<span class="w"> </span><span class="s1">&#39;ludovicchabant/vim-gutentags&#39;</span><span class="w">         </span><span class="s2">&quot;tag相关</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="s2">        Plug &#39;neoclide/coc.nvim&#39;, {&#39;branch&#39;: &#39;master&#39;, &#39;do&#39;: &#39;yarn install --frozen-lockfile&#39;}</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="s2">call plug#end()</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="s2">set directory=.,</span><span class="nv">$TEMP</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="s2">set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="s2">set termencoding=utf-8</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="s2">set encoding=utf-8</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="s2">set nu</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="s2">set mouse=a</span>
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="s2">set selection=exclusive</span>
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="s2">set selectmode=mouse,key</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="s2">&quot; 插件</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="s2">call plug#begin()</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="s2">        Plug &#39;preservim/nerdtree&#39;                   &quot;</span>目录树
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span>Plug<span class="w"> </span><span class="s1">&#39;vim-airline/vim-airline&#39;</span><span class="w">              </span><span class="s2">&quot;主题相关</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="s2">        Plug &#39;vim-airline/vim-airline-themes&#39;       &quot;</span>主题相关
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span>Plug<span class="w"> </span><span class="s1">&#39;preservim/nerdcommenter&#39;</span><span class="w">              </span><span class="s2">&quot;批量注释</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="s2">        Plug &#39;mhinz/vim-startify&#39;                   &quot;</span>最近使用文件
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span>Plug<span class="w"> </span><span class="s1">&#39;tpope/vim-fugitive&#39;</span><span class="w">                   </span><span class="s2">&quot;git命令相关</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="s2">        Plug &#39;tpope/vim-surround&#39;                   &quot;</span>单词周围符号对
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="s2">&quot;Plug &#39;scrooloose/syntastic&#39;                &quot;</span>语法检查
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">        </span>Plug<span class="w"> </span><span class="s1">&#39;rust-lang/rust.vim&#39;</span><span class="w">                   </span><span class="s2">&quot;rust支持</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="s2">        Plug &#39;majutsushi/tagbar&#39;                    &quot;</span>标签栏支持
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="s2">&quot;Plug &#39;w0rp/ale&#39;                             &quot;</span>异步语法检查
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span>Plug<span class="w"> </span><span class="s1">&#39;nvim-treesitter/nvim-treesitter&#39;</span>,<span class="w"> </span><span class="o">{</span><span class="s1">&#39;do&#39;</span>:<span class="w"> </span><span class="s1">&#39;:TSUpdate&#39;</span><span class="o">}</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">        </span>Plug<span class="w"> </span><span class="s1">&#39;jiangmiao/auto-pairs&#39;</span><span class="w">                 </span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span><span class="s2">&quot; Plug &#39;Yggdroot/LeaderF&#39;, { &#39;do&#39;: &#39;./install.sh&#39; } &quot;</span>模糊查找
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">        </span>Plug<span class="w"> </span><span class="s1">&#39;ludovicchabant/vim-gutentags&#39;</span><span class="w">         </span><span class="s2">&quot;tag相关</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="s2">        Plug &#39;neoclide/coc.nvim&#39;, {&#39;branch&#39;: &#39;master&#39;, &#39;do&#39;: &#39;yarn install --frozen-lockfile&#39;}</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="s2">call plug#end()</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="s2">&quot;</span><span class="w"> </span>前缀键&lt;leader&gt;
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="nb">let</span><span class="w"> </span>g:mapleader<span class="o">=</span><span class="s2">&quot;,&quot;</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="s2">&quot; 编码</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="s2">set encoding=utf-8</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="s2">set termencoding=utf-8</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="s2">set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="s2">&quot;</span><span class="w"> </span>行号
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="nb">set</span><span class="w"> </span>number
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="nb">set</span><span class="w"> </span>relativenumber
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="s2">&quot; 缩进</span>
 <a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="s2">set autoindent</span>
-<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="s2">set expandtab</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="s2">set smartindent</span>
 <a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="s2">set tabstop=4</span>
 <a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="s2">set shiftwidth=4</span>
-<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="s2">set expandtab</span>
 <a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="s2">&quot;</span><span class="w"> </span>语法高亮
-<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>syntax<span class="w"> </span><span class="nb">enable</span>
-<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="s2">&quot; 文件类型识别</span>
-<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="s2">filetype plugin indent on</span>
-<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="s2">&quot;</span><span class="w"> </span>ESC映射
-<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>inoremap<span class="w"> </span>&lt;C-j&gt;<span class="w"> </span>&lt;Esc&gt;
-<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>vnoremap<span class="w"> </span>&lt;C-j&gt;<span class="w"> </span>&lt;Esc&gt;
-<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="s2">&quot; 前缀键&lt;leader&gt;</span>
-<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="s2">let mapleader=&quot;</span>,<span class="s2">&quot;</span>
-<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="s2">&quot;</span><span class="w"> </span>目录树
-<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>map<span class="w"> </span>&lt;C-n&gt;<span class="w"> </span>:NERDTreeToggle&lt;CR&gt;
-<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="s2">&quot; 注释</span>
-<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="s2">let g:NERDCreateDefaultMappings = 1</span>
-<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="s2">let g:NERDSpaceDelims = 1</span>
-<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="s2">let g:NERDCompactSexyComs = 1</span>
-<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="s2">let g:NERDDefaultAlign = &#39;left&#39;</span>
-<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="s2">let g:NERDAltDelims_java = 1</span>
-<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="s2">let g:NERDCustomDelimiters = { &#39;c&#39;: { &#39;left&#39;: &#39;/**&#39;,&#39;right&#39;: &#39;*/&#39; } }</span>
-<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="s2">let g:NERDCommentEmptyLines = 1</span>
-<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="s2">let g:NERDTrimTrailingWhitespace = 1</span>
-<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="s2">let g:NERDToggleCheckAllLines = 1</span>
-<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="s2">map &lt;C-\&gt; &lt;Plug&gt;NERDCommenterToggle</span>
-<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="s2">&quot;</span><span class="w"> </span>主题相关
-<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a><span class="s2">&quot; let g:airline_theme=&#39;tomorrow&#39;</span>
-<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="s2">&quot;</span><span class="w"> </span><span class="nb">let</span><span class="w"> </span>g:airline_section_b<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;%{strftime(&quot;%c&quot;)}&#39;</span>
-<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="s2">&quot; let g:airline_section_y = &#39;BN: %{bufnr(&quot;</span>%<span class="s2">&quot;)}&#39;</span>
-<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a><span class="s2">&quot;</span><span class="w"> </span><span class="nb">let</span><span class="w"> </span>g:airline#extensions#tabline#formatter<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;unique_tail&#39;</span>
-<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a><span class="s2">&quot; let g:airline#extensions#tabline#enabled = 1</span>
-<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a><span class="s2">&quot;</span><span class="w"> </span><span class="nb">let</span><span class="w"> </span>g:airline#extensions#tabline#left_sep<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39; &#39;</span>
-<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a><span class="s2">&quot; let g:airline#extensions#tabline#left_alt_sep = &#39;&gt;&#39;</span>
-<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a><span class="s2">&quot;</span><span class="w"> </span><span class="nb">let</span><span class="w"> </span>g:airline#extensions#tabline#buffer_idx_mode<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
-<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a>nmap<span class="w"> </span>&lt;leader&gt;1<span class="w"> </span>&lt;Plug&gt;AirlineSelectTab1
-<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>nmap<span class="w"> </span>&lt;leader&gt;2<span class="w"> </span>&lt;Plug&gt;AirlineSelectTab2
-<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>nmap<span class="w"> </span>&lt;leader&gt;3<span class="w"> </span>&lt;Plug&gt;AirlineSelectTab3
-<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>nmap<span class="w"> </span>&lt;leader&gt;4<span class="w"> </span>&lt;Plug&gt;AirlineSelectTab4
-<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>nmap<span class="w"> </span>&lt;leader&gt;5<span class="w"> </span>&lt;Plug&gt;AirlineSelectTab5
-<a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a>nmap<span class="w"> </span>&lt;leader&gt;6<span class="w"> </span>&lt;Plug&gt;AirlineSelectTab6
-<a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a>nmap<span class="w"> </span>&lt;leader&gt;7<span class="w"> </span>&lt;Plug&gt;AirlineSelectTab7
-<a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a>nmap<span class="w"> </span>&lt;leader&gt;8<span class="w"> </span>&lt;Plug&gt;AirlineSelectTab8
-<a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a>nmap<span class="w"> </span>&lt;leader&gt;9<span class="w"> </span>&lt;Plug&gt;AirlineSelectTab9
-<a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a>nmap<span class="w"> </span>&lt;leader&gt;0<span class="w"> </span>&lt;Plug&gt;AirlineSelectTab0
-<a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a>nmap<span class="w"> </span>&lt;leader&gt;-<span class="w"> </span>&lt;Plug&gt;AirlineSelectPrevTab
-<a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a>nmap<span class="w"> </span>&lt;leader&gt;+<span class="w"> </span>&lt;Plug&gt;AirlineSelectNextTab
-<a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a>
-<a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a><span class="s2">&quot; 标签栏</span>
-<a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a><span class="s2">nmap &lt;F8&gt; :TagbarToggle&lt;CR&gt;</span>
-<a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a><span class="s2">&quot;</span><span class="w"> </span>异步语法检查
-<a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a><span class="s2">&quot; let g:airline#extensions#ale#enabled = 1</span>
-<a id="__codelineno-1-84" name="__codelineno-1-84" href="#__codelineno-1-84"></a><span class="s2">&quot;</span><span class="w"> </span>c++语法高亮
-<a id="__codelineno-1-85" name="__codelineno-1-85" href="#__codelineno-1-85"></a><span class="nb">let</span><span class="w"> </span>g:cpp_class_scope_highlight<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
-<a id="__codelineno-1-86" name="__codelineno-1-86" href="#__codelineno-1-86"></a><span class="nb">let</span><span class="w"> </span>g:cpp_member_variable_highlight<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
-<a id="__codelineno-1-87" name="__codelineno-1-87" href="#__codelineno-1-87"></a><span class="nb">let</span><span class="w"> </span>g:cpp_class_decl_highlight<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
-<a id="__codelineno-1-88" name="__codelineno-1-88" href="#__codelineno-1-88"></a><span class="nb">let</span><span class="w"> </span>g:cpp_posix_standard<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
-<a id="__codelineno-1-89" name="__codelineno-1-89" href="#__codelineno-1-89"></a><span class="nb">let</span><span class="w"> </span>g:cpp_experimental_simple_template_highlight<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
-<a id="__codelineno-1-90" name="__codelineno-1-90" href="#__codelineno-1-90"></a><span class="nb">let</span><span class="w"> </span>g:cpp_concepts_highlight<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>
-<a id="__codelineno-1-91" name="__codelineno-1-91" href="#__codelineno-1-91"></a><span class="s2">&quot; let g:cpp_no_function_highlight = 1</span>
-<a id="__codelineno-1-92" name="__codelineno-1-92" href="#__codelineno-1-92"></a><span class="s2">&quot;</span><span class="w"> </span>模糊查找
-<a id="__codelineno-1-93" name="__codelineno-1-93" href="#__codelineno-1-93"></a><span class="nb">let</span><span class="w"> </span>g:Lf_ShortcutF<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&lt;c-p&gt;&#39;</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>syntax<span class="w"> </span>on
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="nb">set</span><span class="w"> </span>hlsearch<span class="w"> </span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="s2">&quot; 取消高亮</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="s2">noremap &lt;leader&gt;&lt;leader&gt; :nohlsearch&lt;CR&gt;</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="s2">&quot;</span><span class="w"> </span>文件类型识别
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>filetype<span class="w"> </span>on
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>filetype<span class="w"> </span>plugin<span class="w"> </span>on
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>filetype<span class="w"> </span>plugin<span class="w"> </span>indent<span class="w"> </span>on
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="s2">&quot; 搜索</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="s2">set ignorecase</span>
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="s2">set smartcase</span>
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="s2">noremap n nzz       &quot;</span><span class="w"> </span>切换搜索结果，每次在正中间
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>noremap<span class="w"> </span>N<span class="w"> </span>Nzz
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="s2">&quot; 光标恢复</span>
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="s2">au BufReadPost * if line(&quot;</span><span class="s1">&#39;\&quot;&quot;) &gt; 1 &amp;&amp; line(&quot;&#39;</span><span class="se">\&quot;</span><span class="s2">&quot;) &lt;= line(&quot;$&quot;) | exe &quot;</span>normal!<span class="w"> </span>g<span class="s1">&#39;\&quot;&quot; | endif</span>
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="s1">&quot; ESC映射</span>
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="s1">inoremap &lt;C-j&gt; &lt;Esc&gt;</span>
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="s1">vnoremap &lt;C-j&gt; &lt;Esc&gt;</span>
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="s1">&quot; 目录树</span>
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="s1">map &lt;C-n&gt; :NERDTreeToggle&lt;CR&gt;</span>
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="s1">&quot; 注释</span>
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="s1">let g:NERDCreateDefaultMappings = 1</span>
+<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a><span class="s1">let g:NERDSpaceDelims = 1</span>
+<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="s1">let g:NERDCompactSexyComs = 1</span>
+<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="s1">let g:NERDDefaultAlign = &#39;</span>left<span class="s1">&#39;</span>
+<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a><span class="s1">let g:NERDAltDelims_java = 1</span>
+<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a><span class="s1">let g:NERDCustomDelimiters = { &#39;</span>c<span class="s1">&#39;: { &#39;</span>left<span class="s1">&#39;: &#39;</span>/**<span class="s1">&#39;,&#39;</span>right<span class="s1">&#39;: &#39;</span>*/<span class="s1">&#39; } }</span>
+<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a><span class="s1">let g:NERDCommentEmptyLines = 1</span>
+<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a><span class="s1">let g:NERDTrimTrailingWhitespace = 1</span>
+<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a><span class="s1">let g:NERDToggleCheckAllLines = 1</span>
+<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a><span class="s1">map &lt;C-\&gt; &lt;Plug&gt;NERDCommenterToggle</span>
+<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a><span class="s1">&quot; 主题相关</span>
+<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a><span class="s1">&quot; let g:airline_theme=&#39;</span>angr<span class="s1">&#39;</span>
+<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a><span class="s1">let g:airline_theme=&#39;</span>deus<span class="s1">&#39;</span>
+<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a><span class="s1">let g:airline_powerline_fonts = 1</span>
+<a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a><span class="s1">if !exists(&#39;</span>g:airline_symbols<span class="s1">&#39;)</span>
+<a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a><span class="s1">    let g:airline_symbols = {}</span>
+<a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a><span class="s1">endif</span>
+<a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a><span class="s1">let g:airline#extensions#tabline#enabled = 1</span>
+<a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a><span class="s1">let g:airline#extensions#tabline#left_sep = &#39;</span><span class="w"> </span><span class="s1">&#39;</span>
+<a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a><span class="s1">let g:airline#extensions#tabline#left_alt_sep = &#39;</span><span class="p">|</span><span class="s1">&#39;</span>
+<a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a><span class="s1">let g:airline#extensions#tabline#formatter = &#39;</span>unique_tail<span class="s1">&#39;</span>
+<a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a><span class="s1">nmap &lt;C-h&gt; &lt;Plug&gt;AirlineSelectPrevTab</span>
+<a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a><span class="s1">nmap &lt;C-l&gt; &lt;Plug&gt;AirlineSelectNextTab</span>
+<a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a>
+<a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a><span class="s1">&quot; 标签栏</span>
+<a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a><span class="s1">nmap &lt;F8&gt; :TagbarToggle&lt;CR&gt;</span>
+<a id="__codelineno-1-84" name="__codelineno-1-84" href="#__codelineno-1-84"></a><span class="s1">&quot; 异步语法检查</span>
+<a id="__codelineno-1-85" name="__codelineno-1-85" href="#__codelineno-1-85"></a><span class="s1">&quot; let g:airline#extensions#ale#enabled = 1</span>
+<a id="__codelineno-1-86" name="__codelineno-1-86" href="#__codelineno-1-86"></a><span class="s1">&quot; 模糊查找</span>
+<a id="__codelineno-1-87" name="__codelineno-1-87" href="#__codelineno-1-87"></a><span class="s1">let g:Lf_ShortcutF = &#39;</span>&lt;c-p&gt;<span class="s1">&#39;</span>
+<a id="__codelineno-1-88" name="__codelineno-1-88" href="#__codelineno-1-88"></a>
+<a id="__codelineno-1-89" name="__codelineno-1-89" href="#__codelineno-1-89"></a><span class="s1">&quot; gutentags搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归 &quot;</span>
+<a id="__codelineno-1-90" name="__codelineno-1-90" href="#__codelineno-1-90"></a><span class="s1">let g:gutentags_project_root = [&#39;</span>.root<span class="s1">&#39;, &#39;</span>.svn<span class="s1">&#39;, &#39;</span>.git<span class="s1">&#39;, &#39;</span>.project<span class="s1">&#39;]</span>
+<a id="__codelineno-1-91" name="__codelineno-1-91" href="#__codelineno-1-91"></a>
+<a id="__codelineno-1-92" name="__codelineno-1-92" href="#__codelineno-1-92"></a><span class="s1">&quot; 所生成的数据文件的名称 &quot;</span>
+<a id="__codelineno-1-93" name="__codelineno-1-93" href="#__codelineno-1-93"></a><span class="s1">let g:gutentags_ctags_tagfile = &#39;</span>.tags<span class="s1">&#39;</span>
 <a id="__codelineno-1-94" name="__codelineno-1-94" href="#__codelineno-1-94"></a>
-<a id="__codelineno-1-95" name="__codelineno-1-95" href="#__codelineno-1-95"></a><span class="s2">&quot; gutentags搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归 &quot;</span>
-<a id="__codelineno-1-96" name="__codelineno-1-96" href="#__codelineno-1-96"></a><span class="nb">let</span><span class="w"> </span>g:gutentags_project_root<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;.root&#39;</span>,<span class="w"> </span><span class="s1">&#39;.svn&#39;</span>,<span class="w"> </span><span class="s1">&#39;.git&#39;</span>,<span class="w"> </span><span class="s1">&#39;.project&#39;</span><span class="o">]</span>
-<a id="__codelineno-1-97" name="__codelineno-1-97" href="#__codelineno-1-97"></a>
-<a id="__codelineno-1-98" name="__codelineno-1-98" href="#__codelineno-1-98"></a><span class="s2">&quot; 所生成的数据文件的名称 &quot;</span>
-<a id="__codelineno-1-99" name="__codelineno-1-99" href="#__codelineno-1-99"></a><span class="nb">let</span><span class="w"> </span>g:gutentags_ctags_tagfile<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;.tags&#39;</span>
-<a id="__codelineno-1-100" name="__codelineno-1-100" href="#__codelineno-1-100"></a>
-<a id="__codelineno-1-101" name="__codelineno-1-101" href="#__codelineno-1-101"></a><span class="s2">&quot; 将自动生成的 tags 文件全部放入 ~/.cache/tags 目录中，避免污染工程目录 &quot;</span>
-<a id="__codelineno-1-102" name="__codelineno-1-102" href="#__codelineno-1-102"></a><span class="nb">let</span><span class="w"> </span>s:vim_tags<span class="w"> </span><span class="o">=</span><span class="w"> </span>expand<span class="o">(</span><span class="s1">&#39;~/.cache/tags&#39;</span><span class="o">)</span>
-<a id="__codelineno-1-103" name="__codelineno-1-103" href="#__codelineno-1-103"></a><span class="nb">let</span><span class="w"> </span>g:gutentags_cache_dir<span class="w"> </span><span class="o">=</span><span class="w"> </span>s:vim_tags
-<a id="__codelineno-1-104" name="__codelineno-1-104" href="#__codelineno-1-104"></a><span class="s2">&quot; 检测 ~/.cache/tags 不存在就新建 &quot;</span>
-<a id="__codelineno-1-105" name="__codelineno-1-105" href="#__codelineno-1-105"></a><span class="k">if</span><span class="w"> </span>!isdirectory<span class="o">(</span>s:vim_tags<span class="o">)</span>
-<a id="__codelineno-1-106" name="__codelineno-1-106" href="#__codelineno-1-106"></a><span class="w">   </span>silent!<span class="w"> </span>call<span class="w"> </span>mkdir<span class="o">(</span>s:vim_tags,<span class="w"> </span><span class="s1">&#39;p&#39;</span><span class="o">)</span>
-<a id="__codelineno-1-107" name="__codelineno-1-107" href="#__codelineno-1-107"></a>endif
-<a id="__codelineno-1-108" name="__codelineno-1-108" href="#__codelineno-1-108"></a>
-<a id="__codelineno-1-109" name="__codelineno-1-109" href="#__codelineno-1-109"></a><span class="s2">&quot; 配置 ctags 的参数 &quot;</span>
-<a id="__codelineno-1-110" name="__codelineno-1-110" href="#__codelineno-1-110"></a><span class="nb">let</span><span class="w"> </span>g:gutentags_ctags_extra_args<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;--fields=+niazS&#39;</span>,<span class="w"> </span><span class="s1">&#39;--extra=+q&#39;</span><span class="o">]</span>
-<a id="__codelineno-1-111" name="__codelineno-1-111" href="#__codelineno-1-111"></a><span class="nb">let</span><span class="w"> </span>g:gutentags_ctags_extra_args<span class="w"> </span>+<span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;--c++-kinds=+pxI&#39;</span><span class="o">]</span>
-<a id="__codelineno-1-112" name="__codelineno-1-112" href="#__codelineno-1-112"></a><span class="nb">let</span><span class="w"> </span>g:gutentags_ctags_extra_args<span class="w"> </span>+<span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;--c-kinds=+px&#39;</span><span class="o">]</span>
-<a id="__codelineno-1-113" name="__codelineno-1-113" href="#__codelineno-1-113"></a>
-<a id="__codelineno-1-114" name="__codelineno-1-114" href="#__codelineno-1-114"></a><span class="s2">&quot; 自动补全</span>
-<a id="__codelineno-1-115" name="__codelineno-1-115" href="#__codelineno-1-115"></a><span class="s2">inoremap &lt;expr&gt; &lt;Tab&gt; pumvisible() ? &quot;</span><span class="se">\&lt;</span>C-n&gt;<span class="s2">&quot; : &quot;</span><span class="se">\&lt;</span>Tab&gt;<span class="s2">&quot;</span>
-<a id="__codelineno-1-116" name="__codelineno-1-116" href="#__codelineno-1-116"></a><span class="s2">inoremap &lt;expr&gt; &lt;S-Tab&gt; pumvisible() ? &quot;</span><span class="se">\&lt;</span>C-p&gt;<span class="s2">&quot; : &quot;</span><span class="se">\&lt;</span>S-Tab&gt;<span class="s2">&quot;</span>
+<a id="__codelineno-1-95" name="__codelineno-1-95" href="#__codelineno-1-95"></a><span class="s1">&quot; 将自动生成的 tags 文件全部放入 ~/.cache/tags 目录中，避免污染工程目录 &quot;</span>
+<a id="__codelineno-1-96" name="__codelineno-1-96" href="#__codelineno-1-96"></a><span class="s1">let s:vim_tags = expand(&#39;</span>~/.cache/tags<span class="s1">&#39;)</span>
+<a id="__codelineno-1-97" name="__codelineno-1-97" href="#__codelineno-1-97"></a><span class="s1">let g:gutentags_cache_dir = s:vim_tags</span>
+<a id="__codelineno-1-98" name="__codelineno-1-98" href="#__codelineno-1-98"></a><span class="s1">&quot; 检测 ~/.cache/tags 不存在就新建 &quot;</span>
+<a id="__codelineno-1-99" name="__codelineno-1-99" href="#__codelineno-1-99"></a><span class="s1">if !isdirectory(s:vim_tags)</span>
+<a id="__codelineno-1-100" name="__codelineno-1-100" href="#__codelineno-1-100"></a><span class="s1">   silent! call mkdir(s:vim_tags, &#39;</span>p<span class="s1">&#39;)</span>
+<a id="__codelineno-1-101" name="__codelineno-1-101" href="#__codelineno-1-101"></a><span class="s1">endif</span>
+<a id="__codelineno-1-102" name="__codelineno-1-102" href="#__codelineno-1-102"></a>
+<a id="__codelineno-1-103" name="__codelineno-1-103" href="#__codelineno-1-103"></a><span class="s1">&quot; 配置 ctags 的参数 &quot;</span>
+<a id="__codelineno-1-104" name="__codelineno-1-104" href="#__codelineno-1-104"></a><span class="s1">let g:gutentags_ctags_extra_args = [&#39;</span>--fields<span class="o">=</span>+niazS<span class="s1">&#39;, &#39;</span>--extra<span class="o">=</span>+q<span class="s1">&#39;]</span>
+<a id="__codelineno-1-105" name="__codelineno-1-105" href="#__codelineno-1-105"></a><span class="s1">let g:gutentags_ctags_extra_args += [&#39;</span>--c++-kinds<span class="o">=</span>+pxI<span class="s1">&#39;]</span>
+<a id="__codelineno-1-106" name="__codelineno-1-106" href="#__codelineno-1-106"></a><span class="s1">let g:gutentags_ctags_extra_args += [&#39;</span>--c-kinds<span class="o">=</span>+px<span class="err">&#39;</span><span class="o">]</span>
+<a id="__codelineno-1-107" name="__codelineno-1-107" href="#__codelineno-1-107"></a>
+<a id="__codelineno-1-108" name="__codelineno-1-108" href="#__codelineno-1-108"></a><span class="s2">&quot; 自动补全</span>
+<a id="__codelineno-1-109" name="__codelineno-1-109" href="#__codelineno-1-109"></a><span class="s2">inoremap &lt;expr&gt; &lt;Tab&gt; pumvisible() ? &quot;</span><span class="se">\&lt;</span>C-n&gt;<span class="s2">&quot; : &quot;</span><span class="se">\&lt;</span>Tab&gt;<span class="s2">&quot;</span>
+<a id="__codelineno-1-110" name="__codelineno-1-110" href="#__codelineno-1-110"></a><span class="s2">inoremap &lt;expr&gt; &lt;S-Tab&gt; pumvisible() ? &quot;</span><span class="se">\&lt;</span>C-p&gt;<span class="s2">&quot; : &quot;</span><span class="se">\&lt;</span>S-Tab&gt;<span class="s2">&quot;</span>
 </code></pre></div>
 <h3 id="vim">vim插件命令<a class="headerlink" href="#vim" title="Permanent link">&para;</a></h3>
 <table>
