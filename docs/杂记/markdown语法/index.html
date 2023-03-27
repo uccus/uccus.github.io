@@ -1456,6 +1456,14 @@
     C --&gt;|One| D[Laptop]
     C --&gt;|Two| E[iPhone]
     C --&gt;|Three| F[fa:fa-car Car]</div>
+<div class="mermaid">graph  
+subgraph 标准接口
+java接口--&gt;jni接口--&gt;抽象接口
+end
+subgraph 底层对接不同的认证库
+抽象接口-.-&gt;辅助库--&gt;认证库
+抽象接口-.-&gt;xxx辅助库--&gt;xxx认证库
+end</div>
 <h3 id="_8">序列图<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
 <div class="mermaid">sequenceDiagram
   Alice-&gt;&gt;John: Hello John, how are you?
