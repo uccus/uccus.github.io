@@ -1043,15 +1043,115 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_10">
+          前端
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="前端" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          前端
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%89%8D%E7%AB%AF/01%20%20HTML/HTML5/" class="md-nav__link">
+        HTML5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%89%8D%E7%AB%AF/02%20%20CSS3/CSS3/" class="md-nav__link">
+        CSS3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%89%8D%E7%AB%AF/03%20%20JavaScript/JavaScript/" class="md-nav__link">
+        JavaScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E5%89%8D%E7%AB%AF/04%20%20ES6/ES6/" class="md-nav__link">
+        ES6
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_11">
           杂记
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="杂记" data-md-level="1">
-        <label class="md-nav__title" for="__nav_10">
+        <label class="md-nav__title" for="__nav_11">
           <span class="md-nav__icon md-icon"></span>
           杂记
         </label>
@@ -1244,7 +1344,7 @@
 <p>不出意外的话肯定会有意外，意外情况---&gt;<a href="/docs/electron/electron编译过程中的问题/">传送门</a></p>
 </div>
 <h2 id="_2">二、编译源码<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>我下载的版本是<code>4.2.12</code>，这个版本按照编译脚本中的指示，只能用<code>vs2017</code>编译，主要是咱也不敢换其他编译器啊<img alt="😆" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f606.svg" title=":laughing:" /></p>
+<p>我下载的版本是<code>4.2.12</code>，这个版本按照编译脚本中的指示，只能用<code>vs2017</code>编译，主要是咱也不敢换其他编译器啊<img alt="😆" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f606.svg" title=":laughing:" /></p>
 <p>除了vs版本，还需要<code>win10 sdk</code>的支持，在<code>src/build/toolchain/win/setup_toolchain.py</code>中，我们可以看到需要<code>10.0.17134.0</code>的<code>win10 sdk</code>，意味着我们需要下载指定的<code>win10 sdk</code>，下载地址：<a href="https://developer.microsoft.com/zh-cn/windows/downloads/sdk-archive/">这是个传送门</a></p>
 <p><img alt="image_20220223191107.png" class="img-fluid" src="/others/assets/electron/image_20220223191107.png" tag="1" /></p>
 <p>准备工作完成之后呢，就可以开始编译了</p>

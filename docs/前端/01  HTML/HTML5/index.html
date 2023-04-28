@@ -1,0 +1,3143 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="个人知识管理，静态站点，技术宅">
+      
+      
+        <meta name="author" content="zangchao">
+      
+      
+        <link rel="canonical" href="https://uccus.github.io/docs/%E5%89%8D%E7%AB%AF/01%20%20HTML/HTML5/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.1.5">
+    
+    
+      
+        <title>HTML5 - UCCUS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ee0f47ba.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.font.im/css?family=Noto+Sans+Simplified+Chinese:300,400,400i,600,700,900%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans Simplified Chinese";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../others/stylesheets/main.css">
+    
+      <link rel="stylesheet" href="../../../../others/stylesheets/extensions.css">
+    
+      <link rel="stylesheet" href="../../../../others/stylesheets/simplelightbox.min.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="UCCUS" class="md-header__button md-logo" aria-label="UCCUS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UCCUS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HTML5
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/uccus" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    uccus.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="UCCUS" class="md-nav__button md-logo" aria-label="UCCUS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    UCCUS
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/uccus" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    uccus.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          博客建站过程
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="博客建站过程" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          博客建站过程
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/1.%20%E5%BB%BA%E7%AB%99%E6%80%9D%E8%B7%AF/" class="md-nav__link">
+        1. 建站思路
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/2.%20MkDocs%E7%94%9F%E6%88%90%E7%AB%99%E7%82%B9/" class="md-nav__link">
+        2. MkDocs生成站点
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/3.%20GitHub%E6%89%98%E7%AE%A1%E7%AB%99%E7%82%B9/" class="md-nav__link">
+        3. GitHub托管站点
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/4.%20CDN%E5%8A%A0%E9%80%9F%E7%AB%99%E7%82%B9/" class="md-nav__link">
+        4. CDN加速站点
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          WSL2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="WSL2" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          WSL2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wsl/%E5%AE%89%E8%A3%85Ubuntu/" class="md-nav__link">
+        安装Ubuntu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wsl/%E5%AE%89%E8%A3%85Docker/" class="md-nav__link">
+        安装Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wsl/%E5%AE%89%E8%A3%85Centos/" class="md-nav__link">
+        安装Centos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wsl/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="md-nav__link">
+        Linux常用命令
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wsl/vim%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7/" class="md-nav__link">
+        Vim高级技巧
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../wsl/%E5%88%9B%E5%BB%BADocker%E9%95%9C%E5%83%8F/" class="md-nav__link">
+        创建Docker镜像
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python/%E4%BF%AE%E6%94%B9%E4%B8%8B%E8%BD%BD%E6%BA%90/" class="md-nav__link">
+        修改下载源
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python/Anaconda%E7%AE%A1%E7%90%86/" class="md-nav__link">
+        Anaconda管理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../python/Mamba%E7%AE%A1%E7%90%86/" class="md-nav__link">
+        Mamba管理
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Openssl
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Openssl" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Openssl
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../openssl/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%B9%E5%BC%8F%E7%94%9F%E6%88%90%E8%AF%81%E4%B9%A6/" class="md-nav__link">
+        命令行方式生成证书
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../openssl/%E8%AF%81%E4%B9%A6%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E5%8F%8A%E5%86%85%E5%AE%B9%E6%9F%A5%E7%9C%8B/" class="md-nav__link">
+        证书格式转换及内容查看
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Android
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Android" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Android
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../android/%E4%BF%AE%E6%94%B9%E6%88%90%E5%93%81apk%E5%B9%B6%E6%89%93%E5%8C%85/" class="md-nav__link">
+        修改成品apk并打包
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Electron
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Electron" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Electron
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../electron/electron%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/" class="md-nav__link">
+        Electron源码编译
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../electron/electron%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        Electron编译过程中的问题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../electron/electron%E5%A6%82%E4%BD%95%E8%B0%83%E7%94%A8chromium%E4%BB%A3%E7%A0%81/" class="md-nav__link">
+        Electron如何调用chromium代码
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          调试篇
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="调试篇" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          调试篇
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%B0%83%E8%AF%95%E7%AF%87/windbg%E5%92%8Ccdb/" class="md-nav__link">
+        Windbg和cdb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%B0%83%E8%AF%95%E7%AF%87/gdb/" class="md-nav__link">
+        Gdb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E8%B0%83%E8%AF%95%E7%AF%87/lldb/" class="md-nav__link">
+        Lldb
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          逆向
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="逆向" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          逆向
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91/01%20%20OD%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E8%AE%B0%E5%BD%95/" class="md-nav__link">
+        01  OD常用快捷键记录
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91/02%20%20OD%E5%92%8C%E5%AD%97%E8%8A%82%E5%BA%8F/" class="md-nav__link">
+        02  OD和字节序
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E9%80%86%E5%90%91/03%20%20%E6%B1%87%E7%BC%96%E5%B8%B8%E7%94%A8%E5%B0%8F%E7%9F%A5%E8%AF%86/" class="md-nav__link">
+        03  汇编常用小知识
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          前端
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="前端" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          前端
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          HTML5
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        HTML5
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    第一个前端程序
+  </a>
+  
+    <nav class="md-nav" aria-label="第一个前端程序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    两步完成一个网页程序
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    前端工具的选择与安装
+  </a>
+  
+    <nav class="md-nav" aria-label="前端工具的选择与安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    前端常见开发者工具
+  </a>
+  
+    <nav class="md-nav" aria-label="前端常见开发者工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    浏览器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    开发者工具
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vscode" class="md-nav__link">
+    VScode开发者工具快捷键
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html5" class="md-nav__link">
+    HTML5简介与基础骨架
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML5简介与基础骨架">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html5_1" class="md-nav__link">
+    HTML5介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html5doctype" class="md-nav__link">
+    HTML5的DOCTYPE声明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html5_2" class="md-nav__link">
+    HTML5基本骨架
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML5基本骨架">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    html标签
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#head" class="md-nav__link">
+    head标签
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    body标签
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    title标签
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meta" class="md-nav__link">
+    meta标签
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    标签之标题
+  </a>
+  
+    <nav class="md-nav" aria-label="标签之标题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    标题介绍与应用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vscode_1" class="md-nav__link">
+    VSCode插件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    标签之段落、换行、水平线
+  </a>
+  
+    <nav class="md-nav" aria-label="标签之段落、换行、水平线">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    标签之段落
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    换行
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    水平线
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    标签之图片
+  </a>
+  
+    <nav class="md-nav" aria-label="标签之图片">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    网站中最多的元素
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    图片路径详解
+  </a>
+  
+    <nav class="md-nav" aria-label="图片路径详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    绝对路径
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    相对路径
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    网络路径
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    标签之超文本链接
+  </a>
+  
+    <nav class="md-nav" aria-label="标签之超文本链接">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    超链接描述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    超链接属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    超链接表现
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    标签之文本
+  </a>
+  
+    <nav class="md-nav" aria-label="标签之文本">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    常用文本标签
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    列表标签之有序列表
+  </a>
+  
+    <nav class="md-nav" aria-label="列表标签之有序列表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    有序列表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    type属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    有序列表嵌套
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    列表标签之无序列表
+  </a>
+  
+    <nav class="md-nav" aria-label="列表标签之无序列表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    无序列表实现
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type_1" class="md-nav__link">
+    type属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    无序列表嵌套
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    常见应用场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    导航效果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    标签之表格
+  </a>
+  
+    <nav class="md-nav" aria-label="标签之表格">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    表格展示效果
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    表格属性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    表格单元格合并
+  </a>
+  
+    <nav class="md-nav" aria-label="表格单元格合并">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    单元格合并属性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#form" class="md-nav__link">
+    Form表单
+  </a>
+  
+    <nav class="md-nav" aria-label="Form表单">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    表单元素
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    表单元素
+  </a>
+  
+    <nav class="md-nav" aria-label="表单元素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    文本框
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    密码框
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    提交按钮
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    块元素与行内元素（内联元素）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html5_3" class="md-nav__link">
+    HTML5新增标签
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML5新增标签">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    扩展知识
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02%20%20CSS3/CSS3/" class="md-nav__link">
+        CSS3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03%20%20JavaScript/JavaScript/" class="md-nav__link">
+        JavaScript
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04%20%20ES6/ES6/" class="md-nav__link">
+        ES6
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          杂记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="杂记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          杂记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9D%82%E8%AE%B0/markdown%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+        Markdown语法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9D%82%E8%AE%B0/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%96%B9%E6%B3%95/" class="md-nav__link">
+        科学上网方法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E6%9D%82%E8%AE%B0/%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%B3%95/" class="md-nav__link">
+        全局代理设置方法
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    第一个前端程序
+  </a>
+  
+    <nav class="md-nav" aria-label="第一个前端程序">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    两步完成一个网页程序
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    前端工具的选择与安装
+  </a>
+  
+    <nav class="md-nav" aria-label="前端工具的选择与安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    前端常见开发者工具
+  </a>
+  
+    <nav class="md-nav" aria-label="前端常见开发者工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    浏览器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    开发者工具
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vscode" class="md-nav__link">
+    VScode开发者工具快捷键
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html5" class="md-nav__link">
+    HTML5简介与基础骨架
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML5简介与基础骨架">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html5_1" class="md-nav__link">
+    HTML5介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html5doctype" class="md-nav__link">
+    HTML5的DOCTYPE声明
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html5_2" class="md-nav__link">
+    HTML5基本骨架
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML5基本骨架">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    html标签
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#head" class="md-nav__link">
+    head标签
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    body标签
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#title" class="md-nav__link">
+    title标签
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#meta" class="md-nav__link">
+    meta标签
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    标签之标题
+  </a>
+  
+    <nav class="md-nav" aria-label="标签之标题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    标题介绍与应用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vscode_1" class="md-nav__link">
+    VSCode插件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    标签之段落、换行、水平线
+  </a>
+  
+    <nav class="md-nav" aria-label="标签之段落、换行、水平线">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    标签之段落
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    换行
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    水平线
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    标签之图片
+  </a>
+  
+    <nav class="md-nav" aria-label="标签之图片">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    网站中最多的元素
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    图片路径详解
+  </a>
+  
+    <nav class="md-nav" aria-label="图片路径详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    绝对路径
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    相对路径
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    网络路径
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    标签之超文本链接
+  </a>
+  
+    <nav class="md-nav" aria-label="标签之超文本链接">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    超链接描述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    超链接属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    超链接表现
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    标签之文本
+  </a>
+  
+    <nav class="md-nav" aria-label="标签之文本">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    常用文本标签
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    列表标签之有序列表
+  </a>
+  
+    <nav class="md-nav" aria-label="列表标签之有序列表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    有序列表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    type属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    有序列表嵌套
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    列表标签之无序列表
+  </a>
+  
+    <nav class="md-nav" aria-label="列表标签之无序列表">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    无序列表实现
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type_1" class="md-nav__link">
+    type属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    无序列表嵌套
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    常见应用场景
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    导航效果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    标签之表格
+  </a>
+  
+    <nav class="md-nav" aria-label="标签之表格">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    表格展示效果
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    表格属性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    表格单元格合并
+  </a>
+  
+    <nav class="md-nav" aria-label="表格单元格合并">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    单元格合并属性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#form" class="md-nav__link">
+    Form表单
+  </a>
+  
+    <nav class="md-nav" aria-label="Form表单">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    表单元素
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    表单元素
+  </a>
+  
+    <nav class="md-nav" aria-label="表单元素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    文本框
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    密码框
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    提交按钮
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    块元素与行内元素（内联元素）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html5_3" class="md-nav__link">
+    HTML5新增标签
+  </a>
+  
+    <nav class="md-nav" aria-label="HTML5新增标签">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    扩展知识
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+  <h1>HTML5</h1>
+
+<h2 id="_1">第一个前端程序<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20211122114244237" src="../imgs/image-20211122114244237.png" /></p>
+<h3 id="_2">两步完成一个网页程序<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><strong>第一步：使用记事本，编写代码</strong></p>
+<p>在E盘下保存路径<code>E:/itbaizhan/...</code>, 文件名<code>Welcome.html</code></p>
+<p><img alt="image-20211120165959602" src="../imgs/image-20211120165959602.png" /></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>我的网页<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        Hello，我的第一个网页
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>​   </p>
+<blockquote>
+<p><strong>注意事项</strong></p>
+<ol>
+<li>文件后缀名以<code>.html</code>结尾</li>
+<li>在编写代码的过程中，<code>&lt;&gt;</code>必须是英文状态下编写</li>
+</ol>
+</blockquote>
+<p><strong>第二步：以浏览器方式打开</strong></p>
+<p>右键打开方式，以浏览器方式打开即可</p>
+<p><img alt="image-20211014152648100" src="../imgs/image-20211014152648100.png" /></p>
+<p><strong>实时效果反馈</strong></p>
+<p><strong>1. 网页文件是有其特殊的后缀名规则，以下正确的是：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   后缀为<code>.txt</code></p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   后缀为<code>.html</code></p>
+<p><font style="background-color:#8bc34a">C</font>   后缀为<code>Welcome</code></p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   后缀为<code>.浏览器</code></p>
+<p><strong>2. 以下是编写的标签，符合规范的是:</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   <code>《html》《/html》</code></p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   <code>&lt;html&gt;&lt;html/&gt;</code></p>
+<p><font style="background-color:#8bc34a">C</font>   <code>&lt;html&gt;&lt;/html&gt;</code></p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   <code>&lt;html&gt;&lt;html&gt;</code></p>
+<p><strong>答案</strong></p>
+<p>1=&gt;B        2=&gt;C </p>
+<h2 id="_3">前端工具的选择与安装<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20220426211412756" src="../imgs/image-20220426211412756.png" /></p>
+<h3 id="_4">前端常见开发者工具<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>工欲善其事必先利其器</p>
+<h4 id="_5">浏览器<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>浏览器是我们最重要的合作伙伴</p>
+<p><img alt="image-20211014155717770" src="../imgs/image-20211014155717770.png" /></p>
+<blockquote>
+<p><strong>推荐选择</strong></p>
+<p>我们推荐谷歌浏览器，有两点原因：</p>
+<ol>
+<li>简洁大方，打开响应速度快</li>
+<li>开发者调试工具</li>
+</ol>
+</blockquote>
+<p><img alt="image-20211014160058579" src="../imgs/image-20211014160058579.png" /></p>
+<h4 id="_6">开发者工具<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>开发者工具有效的提高了开发效率</p>
+<p><img alt="image-20211017140437476" src="../imgs/image-20211017140437476.png" /></p>
+<blockquote>
+<p><strong>推荐选择</strong></p>
+<p>我们推荐选择VSCode</p>
+<ol>
+<li>打开速度快</li>
+<li>使用方便</li>
+</ol>
+</blockquote>
+<p><strong>VSCode中文语言包安装：</strong></p>
+<p>扩展 → 搜索Chinese → 点击安装</p>
+<p><strong>实时效果反馈</strong></p>
+<p><strong>1. 如何安装VSCode中文语言包：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   扩展 → 搜索中文→ 点击安装</p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   扩展 → 搜索Chinese → 点击安装</p>
+<p><font style="background-color:#8bc34a">C</font>   文件→ 搜索Chinese → 点击安装</p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   文件→ 搜索中文 → 点击安装</p>
+<p><strong>答案</strong></p>
+<p>1 =&gt; B</p>
+<h2 id="vscode">VScode开发者工具快捷键<a class="headerlink" href="#vscode" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20211122160106255" src="../imgs/image-20211122160106255.png" /></p>
+<p><strong>VSCode打开文件夹与创建文件</strong></p>
+<ol>
+<li>选择文件夹</li>
+<li>拖拽文件夹</li>
+</ol>
+<p>生成浏览器文件<code>.html</code>的快捷方式</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">!</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">回车</span>
+</code></pre></div>
+<p><strong>VSCode常用快捷键列表</strong></p>
+<ol>
+<li>代码格式化：<code>Shift+Alt+F</code></li>
+<li>向上或向下移动一行：<code>Alt+Up 或 Alt+Down</code></li>
+<li>快速复制一行代码：<code>Shift+Alt+Up 或 Shift+Alt+Down</code></li>
+<li>快速保存：<code>Ctrl + S</code></li>
+<li>快速查找：<code>Ctrl + F</code></li>
+<li>快速替换：<code>Ctrl + H</code></li>
+</ol>
+<p><strong>实时效果反馈</strong></p>
+<p><strong>1. VSCode快速复制一行代码的快捷键是：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   Shift+Alt+F</p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   Ctrl + S</p>
+<p><font style="background-color:#8bc34a">C</font>   Alt+Up 或 Alt+Down</p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   Shift+Alt+Up 或 Shift+Alt+Down</p>
+<p><strong>2. VSCode快速移动一行代码快捷键:</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   Shift+Alt+F</p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   Ctrl + S</p>
+<p><font style="background-color:#8bc34a">C</font>   Alt+Up 或 Alt+Down</p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   Shift+Alt+Up 或 Shift+Alt+Down</p>
+<p><strong>答案</strong></p>
+<p>1=&gt;D        2=&gt;C </p>
+<h2 id="html5">HTML5简介与基础骨架<a class="headerlink" href="#html5" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20211017170903615" src="../imgs/image-20211017170903615.png" /></p>
+<h3 id="html5_1">HTML5介绍<a class="headerlink" href="#html5_1" title="Permanent link">&para;</a></h3>
+<p>HTML5是用来描述网页的一种语言，被称为超文本标记语言。用HTML5编写的文件，后缀以<code>.html</code>结尾</p>
+<p>HTML是一种标记语言，标记语言是一套标记标签。标签是由尖括号包围的关键字，例如：<code>&lt;html&gt;</code></p>
+<p>标签有两种表现形式：</p>
+<ol>
+<li>双标签，例如：<code>&lt;html&gt;&lt;/html&gt;</code></li>
+<li>单标签，例如：<code>&lt;img&gt;</code></li>
+</ol>
+<h3 id="html5doctype">HTML5的DOCTYPE声明<a class="headerlink" href="#html5doctype" title="Permanent link">&para;</a></h3>
+<p>DOCTYPE是<code>document type</code> (文档类型) 的缩写。<code>&lt;!DOCTYPE html &gt;</code>是H5的声明位于文档的最前面，处于标签之前。
+他是网页必备的组成部分，避免浏览器的怪异模式。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">&lt;!</span><span class="nx">DOCTYPE</span><span class="w"> </span><span class="nx">html</span><span class="o">&gt;</span>
+</code></pre></div>
+<p><img alt="image-20211014164839770" src="../imgs/image-20211014164839770.png" /></p>
+<h3 id="html5_2">HTML5基本骨架<a class="headerlink" href="#html5_2" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20211014164952540" src="../imgs/image-20211014164952540.png" /></p>
+<h4 id="html">html标签<a class="headerlink" href="#html" title="Permanent link">&para;</a></h4>
+<p>定义 HTML 文档，这个元素我们浏览器看到后就明白这是个HTML文档了，所以你的其它元素要包裹在它里面，标签限定了文档的开始点和结束点。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="head">head标签<a class="headerlink" href="#head" title="Permanent link">&para;</a></h4>
+<p>head标签用于定义文档的头部。文档的头部描述了文档的各种属性和信息，包括文档的标题、在 Web 中的位置以及和其他文档的关系等。绝大多数文档头部包含的数据都不会真正作为内容显示给读者。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="body">body标签<a class="headerlink" href="#body" title="Permanent link">&para;</a></h4>
+<p>body 元素定义文档的主体。</p>
+<p>body 元素包含文档的所有内容（比如文本、超链接、图像、表格和列表等等。）</p>
+<p>它会直接在页面中显示出来，也就是用户可以直观看到的内容</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        我会显示在浏览器中
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="title">title标签<a class="headerlink" href="#title" title="Permanent link">&para;</a></h4>
+<ol>
+<li>可定义文档的标题。</li>
+<li>它显示在浏览器窗口的标题栏或状态栏上。</li>
+<li><code>&lt;title&gt;</code> 标签是 <code>&lt;head&gt;</code> 标签中唯一必须要求包含的东西，就是说写head一定要写title</li>
+<li><code>&lt;title&gt;</code>的增加有利于SEO优化</li>
+</ol>
+<blockquote>
+<p>SEO是搜索引擎优化的英文缩写。通过对网站内容调整，满足搜索引擎的排名需求</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>第一个页面<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        我会显示在浏览器中
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="meta">meta标签<a class="headerlink" href="#meta" title="Permanent link">&para;</a></h4>
+<p>meta标签用来描述一个HTML网页文档的属性，关键词等，例如：<code>charset="utf-8"</code>是说当前使用的是<code>utf-8</code>编码格式，在开发中我们经常会看到<code>utf-8</code>，或是<code>gbk</code>，这些都是编码格式，通常使用<code>utf-8</code>。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>itbaizhan<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>实时效果反馈</strong></p>
+<p><strong>1. 下列哪些标签书写格式是正确的是：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   《html》</p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   &lt;!html&gt;</p>
+<p><font style="background-color:#8bc34a">C</font>   html</p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   <code>&lt;html&gt;</code></p>
+<p><strong>2.  以下组成HTML5基础骨架标签正确的是:</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   <code>&lt;html&gt;、&lt;body&gt;、&lt;head&gt;、&lt;div&gt;、&lt;meta&gt;</code></p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   <code>&lt;html&gt;、&lt;body&gt;、&lt;DOCTYPE&gt;、&lt;title&gt;、&lt;meta&gt;</code></p>
+<p><font style="background-color:#8bc34a">C</font>   <code>&lt;html&gt;、&lt;body&gt;、&lt;head&gt;、&lt;title&gt;、&lt;meta&gt;</code></p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   <code>&lt;html&gt;、&lt;body&gt;、&lt;!DOCTYPE html&gt;、&lt;title&gt;、&lt;meta&gt;</code></p>
+<p><strong>答案</strong></p>
+<p>1=&gt;D        2=&gt;C </p>
+<h2 id="_7">标签之标题<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20211120171417126" src="../imgs/image-20211120171417126.png" /></p>
+<h3 id="_8">标题介绍与应用<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>标题（Heading）是通过 <code>&lt;h1&gt; - &lt;h6&gt;</code>标签进行定义的。</p>
+<p><code>&lt;h1&gt;</code>定义最大的标题   <code>&lt;h6&gt;</code>定义最小的标题</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>一级标题<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>二级标题<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>三级标题<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>四级标题<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>五级标题<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;</span>六级标题<span class="p">&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
+</code></pre></div>
+<blockquote>
+<p>生成h1~h6快捷键：h$*6</p>
+</blockquote>
+<h3 id="vscode_1">VSCode插件<a class="headerlink" href="#vscode_1" title="Permanent link">&para;</a></h3>
+<p>快速打开浏览器</p>
+<p>扩展 -&gt; 搜索open in browser -&gt; 点击安装</p>
+<p><strong>正确使用标题</strong></p>
+<p>请确保将 HTML 标题标签只用于标题。</p>
+<p>不要仅仅是为了生成粗体或大号的文本而使用标题。</p>
+<p>正确使用标题有益于SEO</p>
+<p>应该将<code>&lt; h1&gt;</code> 用作主标题（最重要的），其后是 <code>&lt;h2&gt;</code>（次重要的），再其次是 <code>&lt;h3&gt;</code>，以此类推</p>
+<p><img alt="image-20211014171609998" src="../imgs/image-20211014171609998.png" /></p>
+<p><strong>标题标签位置摆放</strong></p>
+<p>在标签中添加属性：<code>align="left | center | right"</code> 默认居左</p>
+<p><img alt="image-20211017140517014" src="../imgs/image-20211017140517014.png" /></p>
+<p><strong>实时效果反馈</strong></p>
+<p><strong>1. 以下那个是三级标题标签：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   <code>&lt;h1&gt;&lt;/h1&gt;</code></p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   <code>&lt;h2&gt;&lt;/h2&gt;</code></p>
+<p><font style="background-color:#8bc34a">C</font>   <code>&lt;h3&gt;&lt;/h3&gt;</code></p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   <code>&lt;h4&gt;&lt;/h4&gt;</code></p>
+<p><strong>2.  标题标签居中摆放属性使用正确的是:</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   <code>align="left | center | right"</code></p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   <code>align="left"</code></p>
+<p><font style="background-color:#8bc34a">C</font>   <code>align="center"</code></p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   <code>align="right"</code></p>
+<p><strong>答案</strong></p>
+<p>1=&gt;C        2=&gt;C </p>
+<h2 id="_9">标签之段落、换行、水平线<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20211120171852680" src="../imgs/image-20211120171852680.png" /></p>
+<h3 id="_10">标签之段落<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>段落是通过<code>&lt;p&gt;</code>标签定义的</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>这是一个段落 <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span> 
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>这是另一个段落<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><img alt="image-20211017125215977" src="../imgs/image-20211017125215977.png" /></p>
+<h3 id="_11">换行<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>如果您希望在不产生一个新段落的情况下进行换行（新行），请使用 <code>&lt;br&gt;</code></p>
+<p><code>&lt;br /&gt;</code> 元素是一个空的 HTML 元素。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>这个<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>段落<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>演示了分行的效果<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><img alt="image-20211014175748915" src="../imgs/image-20211014175748915.png" /></p>
+<h3 id="_12">水平线<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p><code>&lt;hr/&gt;</code>标签在 HTML 页面中创建水平线</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">&lt;</span><span class="nt">hr</span> <span class="na">color</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">size</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">align</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">/&gt;</span>
+</code></pre></div>
+<p>属性：</p>
+<ol>
+<li>color：设置水平线的颜色</li>
+<li>width：设置水平线的宽度</li>
+<li>size：设置水平线的高度</li>
+<li>align：设置水平线的对齐方式（默认居中），可取值left|right</li>
+</ol>
+<p><strong>实时效果反馈</strong></p>
+<p><strong>1. 要实现一个文本换行，可以使用以下那个标签：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   <code>&lt;p&gt;</code>标签</p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   <code>&lt;hr&gt;</code>标签</p>
+<p><font style="background-color:#8bc34a">C</font>   <code>&lt;br&gt;</code>标签</p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   <code>&lt;img&gt;</code>标签</p>
+<p><strong>2.  承载段落文本信息使用以下那个标签:</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   <code>&lt;p&gt;</code>标签</p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   <code>&lt;hr&gt;</code>标签</p>
+<p><font style="background-color:#8bc34a">C</font>   <code>&lt;br&gt;</code>标签</p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   <code>&lt;img&gt;</code>标签</p>
+<p><strong>答案</strong></p>
+<p>1=&gt;C        2=&gt;A </p>
+<h2 id="_13">标签之图片<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20211017175408325" src="../imgs/image-20211017175408325.png" /></p>
+<h3 id="_14">网站中最多的元素<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>网站中最多的元素毋庸置疑，一定是图片</p>
+<p><code>&lt;img&gt;</code> 标签定义 HTML 页面中的图像</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<blockquote>
+<p><strong>注意事项</strong></p>
+<p><code>&lt;img&gt;</code>是单标签，不需要进行闭合操作</p>
+</blockquote>
+<p>属性：</p>
+<ol>
+<li>src：路径（图片地址与名字）</li>
+<li>alt：规定图像的替代文本</li>
+<li>width：规定图像的宽度</li>
+<li>height：规定图像的高度</li>
+<li>title：鼠标悬停在图片上给予提示</li>
+</ol>
+<p><strong>实时效果反馈</strong></p>
+<p><strong>1. <code>&lt;img&gt;</code>标签中alt属性的作用：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   规定图像的替代文本</p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   鼠标悬停在图片上给予提示</p>
+<p><font style="background-color:#8bc34a">C</font>   路径（图片地址与名字）</p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   规定图像的宽度和高度</p>
+<p><strong>2.  以下那个不是<code>&lt;img&gt;</code>标签的属性：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   src</p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   alt</p>
+<p><font style="background-color:#8bc34a">C</font>   title</p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   href</p>
+<p><strong>答案</strong></p>
+<p>1=&gt;A        2=&gt;D </p>
+<h2 id="_15">图片路径详解<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20211120172729161" src="../imgs/image-20211120172729161.png" /></p>
+<h3 id="_16">绝对路径<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p>绝对路径是电脑的盘符存储与访问的具体地址</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>E:\itbaizhanCode\1.jpg
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;E:\itbaizhanCode\1.jpg&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="_17">相对路径<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<p>两者相对关系，两者在同⼀路径下可以直接访问</p>
+<ol>
+<li>
+<p>子级关系: <code>/</code></p>
+</li>
+<li>
+<p>父级关系: <code>../</code></p>
+</li>
+<li>
+<p>同级关系: <code>./</code>（可以省略）</p>
+</li>
+</ol>
+<h3 id="_18">网络路径<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p>具体的⽹络地址: <a href="http://iwenwiki.com/api/newworld/images/n1.png">http://iwenwiki.com/api/newworld/images/n1.png</a></p>
+<p><strong>实时效果反馈</strong></p>
+<p><strong>1. 以下那个是相对路径：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   <code>E:\itbaizhanCode\1.jpg</code></p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   <code>http://iwenwiki.com/api/newworld/images/n1.png</code></p>
+<p><font style="background-color:#8bc34a">C</font>   <code>../images/1.jpg</code></p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   <code>C:\itbaizhanCode\2.jpg</code></p>
+<p><strong>2.  以下关于相对路径描述正确的是：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   相对路径是电脑的盘符存储与访问的具体地址</p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   相对路径是两者相对关系，两者在同⼀路径下可以直接访问</p>
+<p><font style="background-color:#8bc34a">C</font>   相对路径是具体的⽹络地址</p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   相对路径是不存在的</p>
+<p><strong>答案</strong></p>
+<p>1=&gt;C        2=&gt;B </p>
+<h2 id="_19">标签之超文本链接<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20211120173236840" src="../imgs/image-20211120173236840.png" /></p>
+<h3 id="_20">超链接描述<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p>HTML使用标签 <code>&lt;a&gt;</code>来设置超文本链接</p>
+<p>超链接可以是一个字，一个词，或者一组词，也可以是一幅图像，您可以点击这些内容来跳转到新的文档</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;url&quot;</span><span class="p">&gt;</span>链接文本<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="_21">超链接属性<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<p>在标签<code>&lt;a&gt;</code>中使用了<code>href</code>属性来描述链接的地址</p>
+<p>默认情况下，链接将以，以下形式出现在浏览器中：</p>
+<ol>
+<li>
+<p>一个未访问过的链接显示为蓝色字体并带有下划线。</p>
+</li>
+<li>
+<p>访问过的链接显示为紫色并带有下划线。</p>
+</li>
+<li>
+<p>点击链接时，链接显示为红色并带有下划线。</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>特别提示</strong></p>
+<p>后期我们会通过CSS样式修改掉这些效果</p>
+</blockquote>
+<h3 id="_22">超链接表现<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<p>当您把鼠标指针移动到网页中的某个链接上时，箭头会变为一只小手</p>
+<p><img alt="image-20211017141221711" src="../imgs/image-20211017141221711.png" /></p>
+<p><strong>实时效果反馈</strong></p>
+<p><strong>1. 超链接的作用是</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   跳转到新的文档</p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   显示图片的标签</p>
+<p><font style="background-color:#8bc34a">C</font>   显示段落的标签</p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   显示标题的标签</p>
+<p><strong>2.  超链接中<code>href</code>属性的作用</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   设置超链接的宽度和高度</p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   设置超链接的跳转地址</p>
+<p><font style="background-color:#8bc34a">C</font>   设置超链接的显示颜色</p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   设置超链接的文本内容</p>
+<p><strong>答案</strong></p>
+<p>1 =&gt;A   2=&gt;B </p>
+<h2 id="_23">标签之文本<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20211120173736274" src="../imgs/image-20211120173736274.png" /></p>
+<h3 id="_24">常用文本标签<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">标签</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>&lt;em&gt;</code></td>
+<td align="center">定义着重文字</td>
+</tr>
+<tr>
+<td align="center"><code>&lt;b&gt;</code></td>
+<td align="center">定义粗体文本</td>
+</tr>
+<tr>
+<td align="center"><code>&lt;i&gt;</code></td>
+<td align="center">定义斜体字</td>
+</tr>
+<tr>
+<td align="center"><code>&lt;strong&gt;</code></td>
+<td align="center">定义加重语气</td>
+</tr>
+<tr>
+<td align="center"><code>&lt;del&gt;</code></td>
+<td align="center">定义删除字</td>
+</tr>
+<tr>
+<td align="center"><code>&lt;span&gt;</code></td>
+<td align="center">元素没有特定的含义</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>特别提示</strong></p>
+<p>常用文本标签和段落是不同的，段落代表一段文本，而文本标签一般表示文本词汇</p>
+</blockquote>
+<p><strong>实时效果反馈</strong></p>
+<p><strong>1. 定义加重语气的标签是哪一个：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   <code>em</code></p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   <code>&lt;i&gt;</code></p>
+<p><font style="background-color:#8bc34a">C</font>   <code>&lt;del&gt;</code></p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   <code>&lt;strong&gt;</code></p>
+<p><strong>2.  定义着重文字的标签是哪一个：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   <code>em</code></p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   <code>&lt;i&gt;</code></p>
+<p><font style="background-color:#8bc34a">C</font>   <code>&lt;del&gt;</code></p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   <code>&lt;strong&gt;</code></p>
+<p><strong>答案</strong></p>
+<p>1=&gt;D        2=&gt;A </p>
+<h2 id="_25">列表标签之有序列表<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20211120174415921" src="../imgs/image-20211120174415921.png" /></p>
+<h3 id="_26">有序列表<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<p>有序列表是一列项目，列表项目使用数字进行标记。 有序列表始于<code>&lt;ol&gt;</code> 标签。每个列表项始于 <code>&lt;li&gt;</code>标签。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>尚学堂<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>百战程序员<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><img alt="image-20211017132005211" src="../imgs/image-20211017132005211.png" /></p>
+<h3 id="type">type属性<a class="headerlink" href="#type" title="Permanent link">&para;</a></h3>
+<p><code>&lt;ol&gt;</code>的属性type 拥有的选项</p>
+<ol>
+<li>1   表示列表项目用数字标号（1,2,3...）</li>
+<li>a   表示列表项目用小写字母标号（a,b,c...）</li>
+<li>A  表示列表项目用大写字母标号（A,B,C...）</li>
+<li>i   表示列表项目用小写罗马数字标号（i,ii,iii...）</li>
+<li>I   表示列表项目用大写罗马数字标号（I,II,III...）</li>
+</ol>
+<h3 id="_27">有序列表嵌套<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<p>列表是可以进行嵌套的</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>尚学堂<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>        <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>阿里<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>京东<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>        <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>百战程序员<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>实时效果反馈</strong></p>
+<p><strong>1. 有序列表展示效果以下那个描述是正确的：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   展示一个段落效果</p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   展示一个无序的列表效果</p>
+<p><font style="background-color:#8bc34a">C</font>   展示一个有序的列表效果</p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   展示一个加粗的文本效果</p>
+<p><strong>2.  有序列表的标签组合正确的是：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   <code>&lt;ul&gt; + &lt;li&gt;</code></p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   <code>&lt;ol&gt; + &lt;li&gt;</code></p>
+<p><font style="background-color:#8bc34a">C</font>   <code>&lt;h1&gt; + &lt;li&gt;</code></p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   <code>&lt;img&gt; + &lt;li&gt;</code></p>
+<p><strong>答案</strong></p>
+<p>1=&gt;C        2=&gt;B </p>
+<h2 id="_28">列表标签之无序列表<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20211120174927373" src="../imgs/image-20211120174927373.png" /></p>
+<h3 id="_29">无序列表实现<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<p>无序列表是一个项目的列表，此列项目使用粗体圆点（典型的小黑圆圈）进行标记</p>
+<p>无序列表始于 <code>&lt;ul&gt;</code> 标签。每个列表项始于<code>&lt;li&gt;</code> 标签。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>尚学堂<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>百战程序员<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="type_1">type属性<a class="headerlink" href="#type_1" title="Permanent link">&para;</a></h3>
+<p><code>&lt;ul&gt;</code>的属性type 拥有的选项</p>
+<ul>
+<li>
+<p>disc 默认实心圆</p>
+</li>
+<li>
+<p>circle 空心圆</p>
+</li>
+<li>
+<p>square 小方块</p>
+</li>
+<li>
+<p>none 不显示</p>
+</li>
+</ul>
+<h3 id="_30">无序列表嵌套<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<p>列表是可以进行嵌套的</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>尚学堂<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>        <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>阿里<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>            <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>京东<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>        <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>百战程序员<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="_31">常见应用场景<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
+<ol>
+<li>无序的列表效果</li>
+<li>导航效果</li>
+</ol>
+<h3 id="_32">导航效果<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Xiaomi手机<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Redmi 红米<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>电视<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>笔记本<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><img alt="image-20211016124431658" src="../imgs/image-20211016124431658.png" /></p>
+<blockquote>
+<p><strong>快捷键</strong></p>
+<p>快速生成ul+li的布局：ul&gt;li*3（数字根据自己的需要的li数量修改）</p>
+</blockquote>
+<p><strong>实时效果反馈</strong></p>
+<p><strong>1. 无序列表的type属性以下描述错误的是：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   disc 默认实心圆</p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   circle 空心圆</p>
+<p><font style="background-color:#8bc34a">C</font>   square 小方块</p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   triangle 三角形</p>
+<p><strong>2.  无序列表的标签组合正确的是：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   <code>&lt;ul&gt; + &lt;li&gt;</code></p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   <code>&lt;ol&gt; + &lt;li&gt;</code></p>
+<p><font style="background-color:#8bc34a">C</font>   <code>&lt;h1&gt; + &lt;li&gt;</code></p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   <code>&lt;img&gt; + &lt;li&gt;</code></p>
+<p><strong>答案</strong></p>
+<p>1=&gt;D        2=&gt;A </p>
+<h2 id="_33">标签之表格<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20211120180329440" src="../imgs/image-20211120180329440.png" /></p>
+<h3 id="_34">表格展示效果<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
+<p>表格在数据展示方面非常简单，并且表现优秀</p>
+<p><img alt="image-20211016145021813" src="../imgs/image-20211016145021813.png" /></p>
+<blockquote>
+<p><strong>表格组成与特点</strong></p>
+<p>行、列、单元格 </p>
+<p>单元格特点：同行等高、同列等宽。</p>
+<hr />
+<p><strong>表格标签</strong></p>
+<p>表格：<code>&lt;table&gt;</code></p>
+<p>行：<code>&lt;tr&gt;</code></p>
+<p>单元格(列)：<code>&lt;td&gt;</code></p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>尚学堂<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>百战程序员<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>阿里<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>京东<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</code></pre></div>
+<blockquote>
+<p><strong>快捷键</strong></p>
+<p>快速生成表格结构：table&gt;tr*2&gt;td{单元格}</p>
+</blockquote>
+<h3 id="_35">表格属性<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h3>
+<ol>
+<li>border：设置表格的边框</li>
+<li>width：设置表格的宽度</li>
+<li>height：设置表格的高度</li>
+</ol>
+<p><strong>实时效果反馈</strong></p>
+<p><strong>1. 以下那个是表格组成标签组合：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   table + tr + td</p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   table + tr + dl</p>
+<p><font style="background-color:#8bc34a">C</font>   ul + tr + td</p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   ul + table + tr</p>
+<p><strong>2.  以下代码，空格处要填写的标签：</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>    ___
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>尚学堂<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>百战程序员<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>    ___
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   <code>&lt;th&gt;</code> <code>&lt;/th&gt;</code></p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   <code>&lt;tbody&gt;</code> <code>&lt;/tbody&gt;</code></p>
+<p><font style="background-color:#8bc34a">C</font>   <code>&lt;td&gt;</code> <code>&lt;/td&gt;</code></p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   <code>&lt;tr&gt;</code> <code>&lt;/tr&gt;</code></p>
+<p><strong>答案</strong></p>
+<p>1=&gt;A        2=&gt;D </p>
+<h2 id="_36">表格单元格合并<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20211124111834625" src="../imgs/image-20211124111834625.png" /></p>
+<h3 id="_37">单元格合并属性<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20211124133917914" src="../imgs/image-20211124133917914.png" /></p>
+<ul>
+<li>水平合并：colspan</li>
+<li>垂直合并：rowspan</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">&lt;</span><span class="nt">table</span> <span class="na">border</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;500px&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;200px&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>        <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;3&quot;</span><span class="p">&gt;</span>单元格1单元格2单元格3<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>单元格4<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>单元格5<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>        <span class="p">&lt;</span><span class="nt">td</span> <span class="na">rowspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>单元格6-11<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>单元格7<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>        <span class="p">&lt;</span><span class="nt">td</span> <span class="na">rowspan</span><span class="o">=</span><span class="s">&quot;3&quot;</span><span class="p">&gt;</span>单元格81318<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>        <span class="p">&lt;</span><span class="nt">td</span> <span class="na">colspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span> <span class="na">rowspan</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>单元格9101415<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>单元格12<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a>    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>单元格16<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>单元格17<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-23-19" name="__codelineno-23-19" href="#__codelineno-23-19"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>单元格19<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-23-20" name="__codelineno-23-20" href="#__codelineno-23-20"></a>        <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>单元格20<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<a id="__codelineno-23-21" name="__codelineno-23-21" href="#__codelineno-23-21"></a>    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<a id="__codelineno-23-22" name="__codelineno-23-22" href="#__codelineno-23-22"></a><span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>实时效果反馈</strong></p>
+<p><strong>1. 下列那个是单元格垂直合并的属性：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   border</p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   align</p>
+<p><font style="background-color:#8bc34a">C</font>   colspan</p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   rowspan</p>
+<p><strong>答案</strong></p>
+<p>1=&gt;D    </p>
+<h2 id="form">Form表单<a class="headerlink" href="#form" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20211124172703466" src="../imgs/image-20211124172703466.png" /></p>
+<p>表单在 Web 网页中用来给用户填写信息，从而能采用户信息，使网页具有交互的功能。</p>
+<p>所有的用户输入内容的地方都用表单来写，如登录注册、搜索框</p>
+<p><img src="imgs/image-20211124143834115.png" alt="image-20211124143834115" style="zoom:50%;" /></p>
+<p>表单是由容器和控件组成的,一个表单一般应该包含用户填写信息的输入框,按钮等，这些输入框,按钮叫做控件,表单就是容器,它能够容纳各种各样的控件</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;url&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;get|post&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;myform&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div>
+<blockquote>
+<p><strong>属性说明</strong></p>
+<p>action服务器地址</p>
+<p>name表单名称</p>
+<p><strong>method中Get和Post的区别</strong></p>
+<ol>
+<li>数据提交方式，get把提交的数据url可以看到，post看不到</li>
+<li>get一般用于提交少量数据，post用来提交大量数据</li>
+</ol>
+</blockquote>
+<h3 id="_38">表单元素<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h3>
+<p>一个完整的表单包含三个基本组成部分：表单标签、表单域、表单按钮</p>
+<ol>
+<li>表单标签</li>
+<li>表单域</li>
+<li>表单按钮</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>实时效果反馈</strong></p>
+<p><strong>1.以下哪个元素不是表单元素：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   表单标签</p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   表单域</p>
+<p><font style="background-color:#8bc34a">C</font>   表单按钮</p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   图片</p>
+<p><strong>答案</strong></p>
+<p>1=&gt;D  </p>
+<h2 id="_39">表单元素<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20211124173247447" src="../imgs/image-20211124173247447.png" /></p>
+<h3 id="_40">文本框<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h3>
+<p>文本域通过<code>&lt;input type="text"&gt;</code> 标签来设定，当用户要在表单中键入字母、数字等内容时，就会用到文本域</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>    First name: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;firstname&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>    <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>    Last name: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;lastname&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><img alt="image-20211124145315178" src="../imgs/image-20211124145315178.png" /></p>
+<h3 id="_41">密码框<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h3>
+<p>密码字段通过标签<code>&lt;input type="password"&gt;</code> 来定义</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>    Password: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;password&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;pwd&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><img alt="image-20211124145447289" src="../imgs/image-20211124145447289.png" /></p>
+<blockquote>
+<p><strong>温馨提示</strong></p>
+<p>密码字段字符不会明文显示，而是以星号或圆点替代</p>
+</blockquote>
+<h3 id="_42">提交按钮<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h3>
+<p>当用户单击确认按钮时，表单的内容会被传送到另一个文件。表单的动作属性定义了目的文件的文件名。由动作属性定义的这个文件通常会对接收到的输入数据进行相关的处理</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="p">&lt;</span><span class="nt">form</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;input&quot;</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;url&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;get&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>    Username: <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;user&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Submit&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><img alt="image-20211124150330131" src="../imgs/image-20211124150330131.png" /></p>
+<p><strong>实时效果反馈</strong></p>
+<p><strong>1.设置输入框为密码框，type属性应该填写内容：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   text</p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   password</p>
+<p><font style="background-color:#8bc34a">C</font>   radio</p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   name</p>
+<p><strong>答案</strong></p>
+<p>1=&gt;B</p>
+<h2 id="_43">块元素与行内元素（内联元素）<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20211126104646087" src="../imgs/image-20211126104646087.png" /></p>
+<p>HTML5出现之前，经常把元素按照块级元素和内联元素来区分。在HTML5中，元素不再按照这种⽅式来区分， 而是按照内容模型来区分，分为元数据型(metadata content)、区块型(sectioning content)、标题型(heading content)、文档流型(flow content)、语句型(phrasing content)、内嵌型(embedded content)、交互型 (interactive content)。元素不属于任何⼀个类别，被称为穿透的，元素可能属于不止⼀个类别，称为混合的</p>
+<p><img alt="Content_categories_venn" src="../imgs/Content_categories_venn.png" /></p>
+<p>详细参考地址：<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Content_categories">https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Content_categories</a> </p>
+<p>虽然到了HTML5的版本，元素分类更细致了，但是这对初学者并不友好,所以我们仍然按照块元素和内联元素做区分，这对我们的布局起到了至关重要的作用</p>
+<p>内联元素和块级元素的区别 </p>
+<table>
+<thead>
+<tr>
+<th align="center">块级元素</th>
+<th align="center">内联元素</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">块元素会在页面中独占一行（自上向下垂直排列）</td>
+<td align="center">行内元素不会独占页面中的一行，只占自身的大小</td>
+</tr>
+<tr>
+<td align="center">可以设置width，height属性</td>
+<td align="center">行内元素设置width，height属性无效</td>
+</tr>
+<tr>
+<td align="center">⼀般块级元素可以包含行内元素和其他块级元素</td>
+<td align="center">⼀般内联元素包含内联元素不包含块级元素</td>
+</tr>
+</tbody>
+</table>
+<p>常见块级元素</p>
+<blockquote>
+<p>div、form、h1~h6、hr、p、table、ul、等</p>
+</blockquote>
+<p>常见内联元素(行内元素)</p>
+<blockquote>
+<p>a、b、em、i、span、strong等 </p>
+</blockquote>
+<p>行内块级元素（特点：不换行、能够识别宽高）</p>
+<blockquote>
+<p>button、img、input等 </p>
+</blockquote>
+<p><strong>实时效果反馈</strong></p>
+<p><strong>1.下列关于元素分类描述错误的是：</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   块元素会在页面中独占一行,行内元素不会独占页面中的一行，只占自身的大小</p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   块元素可以设置width，height属性,行内元素设置width，height属性无效</p>
+<p><font style="background-color:#8bc34a">C</font>   ⼀般块级元素可以包含行内元素和其他块级元素,⼀般内联元素包含内联元素不包含块级元素 </p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   块元素可以设置大小,不会独占一行,行内元素无法无法设置大小,但是会独占一行</p>
+<p><strong>答案</strong></p>
+<p>1=&gt;D  </p>
+<h2 id="html5_3">HTML5新增标签<a class="headerlink" href="#html5_3" title="Permanent link">&para;</a></h2>
+<p><img alt="image-20211126170309621" src="../imgs/image-20211126170309621.png" /></p>
+<p><code>HTML5</code>是<code>HTML</code>最新的修订版本，2014年10月由万维网联盟<code>（W3C）</code>完成标准制定</p>
+<p>在<code>HTML5</code>出现之前，我们一般采用<code>DIV+CSS</code>布局我们的页面。但是这样的布局方式不仅使我们的文档结构不够清晰，而且**不利于搜索引擎爬虫对我们页面的爬取**。为了解决上述缺点，<code>HTML5</code>新增了很多新的语义化标签</p>
+<h3 id="_44">扩展知识<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h3>
+<p><code>div</code>容器元素，也是页面中见到的最多的元素</p>
+<p>div实现</p>
+<p><img alt="image-20211126150749756" src="../imgs/image-20211126150749756.png" /></p>
+<p>H5新标签实现</p>
+<p><img alt="image-20211126150757403" src="../imgs/image-20211126150757403.png" /></p>
+<p><strong>H5新标签</strong></p>
+<ol>
+<li><code>&lt;header&gt;&lt;/header&gt;</code>  头部</li>
+<li><code>&lt;nav&gt;&lt;/nav&gt;</code>  导航</li>
+<li><code>&lt;section&gt;&lt;/section&gt;</code>定义文档中的节,比如章节、页眉、页脚</li>
+<li><code>&lt;aside&gt;&lt;/aside&gt;</code>  侧边栏</li>
+<li><code>&lt;footer&gt;&lt;/footer&gt;</code> 脚部</li>
+<li><code>&lt;article&gt;&lt;/article&gt;</code>  代表一个独立的、完整的相关内容块,例如一篇完整的论坛帖子，一篇博客文章，一个用户评论等</li>
+</ol>
+<p><strong>实时效果反馈</strong></p>
+<p><strong>1.下列哪个不属于HTML5的新增标签</strong></p>
+<p><font style="background-color:rgb(233, 30, 100)">A</font>   <code>&lt;header&gt;&lt;/header&gt;</code></p>
+<p><font style="background-color:rgb(255, 197, 10)">B</font>   <code>&lt;div&gt;&lt;/div&gt;</code></p>
+<p><font style="background-color:#8bc34a">C</font>   <code>&lt;footer&gt;&lt;/footer&gt;</code></p>
+<p><font style="background-color:rgb(2, 170, 244);">D</font>   <code>&lt;nav&gt;&lt;/nav&gt;</code></p>
+<p><strong>答案</strong></p>
+<p>1=&gt;B  </p>
+
+              
+              <hr>
+              <span id="busuanzi_container_page_pv">
+                <font size="3" color="grey">本文总阅读量
+                  <span id="busuanzi_value_page_pv"> </span>
+                  次
+                </font>
+              </span>
+              <br/>
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="页脚">
+      
+        
+        <a href="../../../%E9%80%86%E5%90%91/03%20%20%E6%B1%87%E7%BC%96%E5%B8%B8%E7%94%A8%E5%B0%8F%E7%9F%A5%E8%AF%86/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 03  汇编常用小知识" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              03  汇编常用小知识
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../02%20%20CSS3/CSS3/" class="md-footer__link md-footer__link--next" aria-label="下一页: CSS3" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              CSS3
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2019 - 2023 zangchao
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.indexes", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b6ff8c07.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.5e13d264.min.js"></script>
+      
+        <script src="../../../../others/javascripts/jquery-1.10.2.min.js"></script>
+      
+        <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      
+        <script src="../../../../others/javascripts/mathjax.js"></script>
+      
+        <script src="../../../../others/javascripts/extension.js"></script>
+      
+        <script src="../../../../others/javascripts/simple-lightbox.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
