@@ -12,14 +12,14 @@
         <meta name="author" content="zangchao">
       
       
-        <link rel="canonical" href="https://uccus.github.io/docs/electron/electron%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/">
+        <link rel="canonical" href="https://uccus.github.io/docs/qt/qss%E6%8A%80%E5%B7%A7/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.0, mkdocs-material-8.1.5">
     
     
       
-        <title>Electron源码在windows平台编译过程记录 - UCCUS</title>
+        <title>Qss技巧 - UCCUS</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#electronwindows" class="md-skip">
+        <a href="#1" class="md-skip">
           跳转至
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Electron源码在windows平台编译过程记录
+              Qss技巧
             
           </span>
         </div>
@@ -571,12 +571,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
       
       
       
@@ -601,11 +603,69 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../qt/qss%E6%8A%80%E5%B7%A7/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Qss技巧
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Qss技巧
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 如何快速看到效果
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2. 针对多分辨率，多主题，怎么办
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 修改大小
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 设置背景图片
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -743,14 +803,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
       
       
       
@@ -779,93 +837,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Electron源码在windows平台编译过程记录
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../electron/electron%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/" class="md-nav__link">
         Electron源码在windows平台编译过程记录
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    一、 获取源码
-  </a>
-  
-    <nav class="md-nav" aria-label="一、 获取源码">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-depot_tools" class="md-nav__link">
-    a. 下载depot_tools工具包
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#b-gclient" class="md-nav__link">
-    b. 生成.gclient文件
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#c" class="md-nav__link">
-    c. 同步代码及依赖
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#d-hook" class="md-nav__link">
-    d. 执行额外hook脚本
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    二、编译源码
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -877,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../electron%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98/" class="md-nav__link">
+      <a href="../../electron/electron%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98/" class="md-nav__link">
         electron编译过程中遇到的问题
       </a>
     </li>
@@ -891,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../electron%E5%A6%82%E4%BD%95%E8%B0%83%E7%94%A8chromium%E4%BB%A3%E7%A0%81/" class="md-nav__link">
+      <a href="../../electron/electron%E5%A6%82%E4%BD%95%E8%B0%83%E7%94%A8chromium%E4%BB%A3%E7%A0%81/" class="md-nav__link">
         Electron调用chromium源码解析
       </a>
     </li>
@@ -1274,8 +1250,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1284,49 +1258,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    一、 获取源码
+  <a href="#1" class="md-nav__link">
+    1. 如何快速看到效果
   </a>
-  
-    <nav class="md-nav" aria-label="一、 获取源码">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a-depot_tools" class="md-nav__link">
-    a. 下载depot_tools工具包
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#b-gclient" class="md-nav__link">
-    b. 生成.gclient文件
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#c" class="md-nav__link">
-    c. 同步代码及依赖
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#d-hook" class="md-nav__link">
-    d. 执行额外hook脚本
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    二、编译源码
+  <a href="#2" class="md-nav__link">
+    2. 针对多分辨率，多主题，怎么办
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3. 修改大小
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    4. 设置背景图片
   </a>
   
 </li>
@@ -1344,74 +1298,38 @@
               
                 
 
-<h1 id="electronwindows">Electron源码在windows平台编译过程记录<a class="headerlink" href="#electronwindows" title="Permanent link">&para;</a></h1>
-<h2 id="_1">一、 获取源码<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>获取全程需要科学上网的支持，为啥不找国内镜像下载呢，国内镜像只是下载electron这个仓库的代码，并不会自动拉取依赖。</p>
-</blockquote>
-<h4 id="a-depot_tools">a. 下载depot_tools工具包<a class="headerlink" href="#a-depot_tools" title="Permanent link">&para;</a></h4>
-<p>depot_tools是谷歌用于管理大仓库代码的工具，这里我们需要它。</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>E:<span class="se">\t</span>ools
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://chromium.googlesource.com/chromium/tools/depot_tools.git
+  <h1>Qss技巧</h1>
+
+<h3 id="1">1. 如何快速看到效果<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>​       一般用<code>qApp-&gt;setStyleSheet</code>加载全局的样式数据，注意这里的<code>setStyleSheet</code>接收的是一个字符串，也就是说，我们可以在程序运行过程中，修改样式表，通过某个按钮读取样式表文件，并调用<code>setStyleSheet</code>实时刷新样式。</p>
+<h3 id="2">2. 针对多分辨率，多主题，怎么办<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p>​       方法一：针对不同的分辨率，不同的主题，读取不同的样式表文件。</p>
+<p>​       方法二：样式表文件可以用<code>/**/</code>来注释，如下所示，我们可以在程序内部按行读取样式表文件，然后根据<code>注释里的关键字</code>选取需要的样式数据，最后组成一个字符串传递给qApp。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">QPushButton</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span><span class="w">    </span><span class="c">/* FOR_1920x1080 */</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="kt">px</span><span class="p">;</span><span class="w">    </span><span class="c">/* FOR_2K */</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span><span class="w">   </span><span class="c">/* FOR_1920x1080 */</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="n">heihgt</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="kt">px</span><span class="p">;</span><span class="w">   </span><span class="c">/* FOR_2K */</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
 </code></pre></div>
-<p>拉取成功后，设置环境变量<code>PATH=E:\tools\depot_tools</code></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>这个环境变量必须在git和python的前面，这样就没有了git和python版本的干扰,设置完成之后，就可以使用gclient，gn等脚本了</p>
-</div>
-<p>继续设置环境变量</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>#禁用depot_tools的自动更新
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>set DEPOT_TOOLS_UPDATE=0
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>#告诉depot_tools，不下载visual studio，使用单独下载的visual studio
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>set DEPOT_TOOLS_WIN_TOOLCHAIN=0
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>#设置git缓存路径，git不支持断点续传，下载时很有可能中断，这个时候缓存非常有用
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>set GIT_CACHE_PATH=E:\git_cache
+<h3 id="3">3. 修改大小<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">QFrame</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">max-height</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">min-height</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">min-width</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">}</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nt">QPushButton</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
 </code></pre></div>
-<h4 id="b-gclient">b. 生成.gclient文件<a class="headerlink" href="#b-gclient" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>cd E:\work\opensource
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>mkdir electron &amp;&amp; cd electron
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>#生成.gclient文件，指定tag版本
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>gclient config --name &quot;src/electron&quot; --unmanaged https://github.com/electron/electron@v4.2.12
+<h3 id="4">4. 设置背景图片<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">QFrame</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="c">/* 可跟随控件大小自动伸展 */</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">border-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="sx">:/Resources/3.png</span><span class="p">)</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kc">stretch</span><span class="w"> </span><span class="kc">stretch</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">}</span>
 </code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>为什么<code>--name</code>的值是<code>src/electron</code>呢？因为electron是作为chromium的一个子项目管理的，编译脚本中路径已经写死，代码拉下来后，目录结构是这样的
-<img alt="image_20220223184526.png" src="/others/assets/electron/image_20220223184526.png" /></p>
-</div>
-<h4 id="c">c. 同步代码及依赖<a class="headerlink" href="#c" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>gclient sync --nohooks --no-history
-</code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>--nohooks：代码拉取完成后，不执行hook操作</p>
-<p>--no-history：不拉取历史提交信息，可大大减少流量</p>
-<p>这个过程会持续2-3h。。。</p>
-</div>
-<h4 id="d-hook">d. 执行额外hook脚本<a class="headerlink" href="#d-hook" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>gclient runhooks
-</code></pre></div>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>这个过程会拉取项目依赖的二进制文件，比如clang编译器等，这一步消耗时间不会太多，执行完成后，整个代码及其依赖，二进制依赖都已成功下载到本地</p>
-<p>不出意外的话肯定会有意外，意外情况---&gt;<a href="/docs/electron/electron编译过程中的问题/">传送门</a></p>
-</div>
-<h2 id="_2">二、编译源码<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>我下载的版本是<code>4.2.12</code>，这个版本按照编译脚本中的指示，只能用<code>vs2017</code>编译，主要是咱也不敢换其他编译器啊<img alt="😆" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f606.svg" title=":laughing:" /></p>
-<p>除了vs版本，还需要<code>win10 sdk</code>的支持，在<code>src/build/toolchain/win/setup_toolchain.py</code>中，我们可以看到需要<code>10.0.17134.0</code>的<code>win10 sdk</code>，意味着我们需要下载指定的<code>win10 sdk</code>，下载地址：<a href="https://developer.microsoft.com/zh-cn/windows/downloads/sdk-archive/">这是个传送门</a></p>
-<p><img alt="image_20220223191107.png" class="img-fluid" src="/others/assets/electron/image_20220223191107.png" tag="1" /></p>
-<p>准备工作完成之后呢，就可以开始编译了</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>cd src
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>#设置vs2017的目录
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>set vs2017_install=F:\visual studio\Microsoft Visual Studio\2017\Community
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>#设置chromium构建工具目录
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>set CHROMIUM_BUILDTOOLS_PATH=%cd%\buildtools
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>#生成debug版本
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>gn gen out/debug --args=&quot;import(\&quot;//electron/build/args/debug.gn\&quot;)&quot;
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>#编译
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>ninja -C out/debug electron
-</code></pre></div>
-<p>编译中可能出现的问题----&gt;<a href="/docs/electron/electron编译过程中的问题/">传送门</a></p>
-<p>如果完全按照上面的方法做的话，编译不会出现问题，因为谷歌的大佬们已经将代码依赖管理的非常好了。</p>
 
               
               <hr>
@@ -1438,7 +1356,7 @@
     <nav class="md-footer__inner md-grid" aria-label="页脚">
       
         
-        <a href="../../android/%E4%BF%AE%E6%94%B9%E6%88%90%E5%93%81apk%E5%B9%B6%E6%89%93%E5%8C%85/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 修改成品apk并打包" rel="prev">
+        <a href="../../python/Mamba%E7%AE%A1%E7%90%86/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Mamba管理Python" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1447,20 +1365,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              修改成品apk并打包
+              Mamba管理Python
             </div>
           </div>
         </a>
       
       
         
-        <a href="../electron%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E9%97%AE%E9%A2%98/" class="md-footer__link md-footer__link--next" aria-label="下一页: electron编译过程中遇到的问题" rel="next">
+        <a href="../../openssl/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%B9%E5%BC%8F%E7%94%9F%E6%88%90%E8%AF%81%E4%B9%A6/" class="md-footer__link md-footer__link--next" aria-label="下一页: 命令行方式生成证书" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              electron编译过程中遇到的问题
+              命令行方式生成证书
             </div>
           </div>
           <div class="md-footer__button md-icon">
