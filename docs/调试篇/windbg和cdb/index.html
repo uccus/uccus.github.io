@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://uccus.github.io/docs/%E8%B0%83%E8%AF%95%E7%AF%87/windbg%E5%92%8Ccdb/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-8.1.5">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.1.5">
     
     
       
@@ -1454,15 +1454,16 @@
 <a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>dx<span class="w"> </span>-?<span class="w">  </span><span class="c1"># 查看具体用法</span>
 <a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>dx<span class="w"> </span>var<span class="w">  </span>,x<span class="w">    </span><span class="c1"># 16进制的方式显示数据</span>
 <a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>dx<span class="w"> </span>var<span class="w">  </span>,s8<span class="w">   </span><span class="c1"># uf8格式查看字符串,相当有用</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>dx<span class="w"> </span>-g<span class="w">   </span><span class="c1"># 表格形式查看数据</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="c1"># 比较内存，相同则没有输出，不同会显示地址信息</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>c<span class="w"> </span>变量或地址<span class="w">  </span>L长度<span class="w">   </span>变量或地址
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="c1"># 填充内存</span>
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>f<span class="w"> </span>变量或地址<span class="w">  </span>L长度<span class="w">   </span>值
-<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="c1"># 移动内存，复制内存</span>
-<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>m<span class="w"> </span>变量或地址<span class="w">  </span>L长度<span class="w">    </span>源变量或地址
-<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="c1"># 编辑内存</span>
-<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>e*
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>dx<span class="w"> </span>!var<span class="w">       </span><span class="c1"># 查看和地址混淆的变量</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>dx<span class="w"> </span>-g<span class="w">   </span><span class="c1"># 表格形式查看数据</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="c1"># 比较内存，相同则没有输出，不同会显示地址信息</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>c<span class="w"> </span>变量或地址<span class="w">  </span>L长度<span class="w">   </span>变量或地址
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="c1"># 填充内存</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>f<span class="w"> </span>变量或地址<span class="w">  </span>L长度<span class="w">   </span>值
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="c1"># 移动内存，复制内存</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>m<span class="w"> </span>变量或地址<span class="w">  </span>L长度<span class="w">    </span>源变量或地址
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="c1"># 编辑内存</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>e*
 </code></pre></div>
 <h4 id="_8">其他<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># 重复上条指令</span>
@@ -1487,8 +1488,8 @@
 <a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>lsc<span class="w">     </span><span class="c1"># 列出当前源</span>
 <a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>ls<span class="w">      </span><span class="c1"># 显示当前源代码</span>
 <a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>l+,l-<span class="w">   </span><span class="c1"># 设置源选项</span>
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>l+t,l+s,l+o
-<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>l-t,l-s,l-o
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>l+t,l+s,l+o<span class="w">   </span><span class="c1"># l+t: 源码级调试</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>l-t,l-s,l-o<span class="w">   </span><span class="c1"># l-t: 汇编级调试</span>
 <a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="c1"># 查看进程环境信息</span>
 <a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>!peb
 <a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>dt<span class="w"> </span>ntdll!_PEB<span class="w">  </span><span class="c1"># 查看某模块的环境信息</span>
