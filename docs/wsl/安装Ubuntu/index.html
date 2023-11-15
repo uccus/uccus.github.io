@@ -1384,7 +1384,17 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>NoLsp.exe C:\windows\system32\wsl.exe
 </code></pre></div>
 </details>
-<p>​       </p>
+<p>​   </p>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+</div>
+<p>​    wsl的所有命令都没有响应</p>
+<details class="success">
+<summary>Success</summary>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>tasklist<span class="w"> </span>/svc<span class="w"> </span>/fi<span class="w"> </span><span class="s2">&quot;imagename eq svchost.exe&quot;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># 找到LxssManager的pid，并杀掉该进程</span>
+</code></pre></div>
 
               
               <hr>
