@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://uccus.github.io/docs/electron/electron%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-8.1.5">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-8.1.5">
     
     
       
@@ -1201,6 +1201,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_12">
@@ -1279,6 +1281,20 @@
     <li class="md-nav__item">
       <a href="../../%E6%9D%82%E8%AE%B0/git%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" class="md-nav__link">
         git配置文件
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9D%82%E8%AE%B0/git%E6%96%B9%E6%B3%95/" class="md-nav__link">
+        git常用方法
       </a>
     </li>
   
@@ -1444,7 +1460,7 @@
 <p>不出意外的话肯定会有意外，意外情况---&gt;<a href="/docs/electron/electron编译过程中的问题/">传送门</a></p>
 </div>
 <h2 id="_2">二、编译源码<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>我下载的版本是<code>4.2.12</code>，这个版本按照编译脚本中的指示，只能用<code>vs2017</code>编译，主要是咱也不敢换其他编译器啊<img alt="😆" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f606.svg" title=":laughing:" /></p>
+<p>我下载的版本是<code>4.2.12</code>，这个版本按照编译脚本中的指示，只能用<code>vs2017</code>编译，主要是咱也不敢换其他编译器啊<img alt="😆" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f606.svg" title=":laughing:" /></p>
 <p>除了vs版本，还需要<code>win10 sdk</code>的支持，在<code>src/build/toolchain/win/setup_toolchain.py</code>中，我们可以看到需要<code>10.0.17134.0</code>的<code>win10 sdk</code>，意味着我们需要下载指定的<code>win10 sdk</code>，下载地址：<a href="https://developer.microsoft.com/zh-cn/windows/downloads/sdk-archive/">这是个传送门</a></p>
 <p><img alt="image_20220223191107.png" class="img-fluid" src="/others/assets/electron/image_20220223191107.png" tag="1" /></p>
 <p>准备工作完成之后呢，就可以开始编译了</p>
