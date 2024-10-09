@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://uccus.github.io/docs/%E8%B0%83%E8%AF%95%E7%AF%87/lldb/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-8.1.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.1.5">
     
     
       
@@ -1340,10 +1340,11 @@
 <p>lldb是下一代性能非常强大的调试器，支持很多语言。</p>
 <p>lldb的命令与gdb差别不大，具体可以查看官网文档<a href="https://lldb.llvm.org/use/map.html">https://lldb.llvm.org/use/map.html</a></p>
 <h3 id="androidlldb">android下lldb调试修改源码路径<a class="headerlink" href="#androidlldb" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 查看老的源码路径</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>aarch64-linux-android-objdump.exe<span class="w"> </span>--dwarf<span class="o">=</span>info<span class="w"> </span>libxxx.a<span class="o">(</span>libxxx.so<span class="o">)</span><span class="w"> </span><span class="p">|</span>rg<span class="w"> </span>DW_AT_name<span class="p">|</span>rg<span class="w"> </span>/
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># 修改源码路径</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>settings<span class="w"> </span><span class="nb">set</span><span class="w"> </span>target.source-map<span class="w"> </span>old_source_path<span class="w"> </span>new_source_path
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 前提: 编译时CFLAG带上 -g -O0</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># 查看老的源码路径</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>aarch64-linux-android-objdump.exe<span class="w"> </span>--dwarf<span class="o">=</span>info<span class="w"> </span>libxxx.a<span class="o">(</span>libxxx.so<span class="o">)</span><span class="w"> </span><span class="p">|</span>rg<span class="w"> </span>DW_AT_name<span class="p">|</span>rg<span class="w"> </span>/
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># 修改源码路径</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>settings<span class="w"> </span><span class="nb">set</span><span class="w"> </span>target.source-map<span class="w"> </span>old_source_path<span class="w"> </span>new_source_path
 </code></pre></div>
 
               
