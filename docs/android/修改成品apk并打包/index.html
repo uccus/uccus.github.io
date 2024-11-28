@@ -1386,6 +1386,11 @@
 <a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="c1"># 没有keystore需要生成一个</span>
 <a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="c1"># keytool -genkey -v -keystore my-release-key.keystore -alias my-release-key -keyalg RSA -keysize 2048 -validity 10000</span>
 <a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>jarsigner<span class="w"> </span>-verbose<span class="w"> </span>-sigalg<span class="w"> </span>SHA1withRSA<span class="w"> </span>-digestalg<span class="w"> </span>SHA1<span class="w"> </span>-keystore<span class="w"> </span>my-release-key.keystore<span class="w"> </span>newname.apk<span class="w"> </span>my-release-key
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="c1"># v2签名</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="c1"># 没有jks需要生成一个</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="c1"># keytool -genkeypair -v -keystore my_key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias my_key</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>C:<span class="se">\U</span>sers<span class="se">\A</span>dmin<span class="se">\A</span>ppData<span class="se">\L</span>ocal<span class="se">\A</span>ndroid<span class="se">\S</span>dk<span class="se">\b</span>uild-tools<span class="se">\2</span><span class="m">9</span>.0.2<span class="se">\a</span>pksigner.bat<span class="w"> </span>sign<span class="w"> </span>--ks<span class="w"> </span>D:<span class="se">\t</span>ools<span class="se">\A</span>ndroid<span class="se">\m</span>y_key.jks<span class="w"> </span>yourapk.apk
 </code></pre></div>
 
               
